@@ -9,6 +9,9 @@
 /* Подключаем блок root */
 
 @import url(../blocks/root/root.css);
+@import url(../blocks/root/__header/root__header.css);
+@import url(../blocks/root/__main/root__main.css);
+@import url(../blocks/root/__footer/root__footer.css);
 
 /* Подключаем блок header и его компоненты */
 
