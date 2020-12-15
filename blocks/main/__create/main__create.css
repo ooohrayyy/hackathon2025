@@ -1,0 +1,14 @@
+.main__create {
+  padding: 16px 32px;
+  margin: 0;
+  /* margin-bottom: 206px; */
+  border: none;
+  border-radius: 10px;
+  color: #FFFEFE;
+  background-color: #59a1f2;
+  transition: .2s linear;
+}
+
+.main__create:hover {
+  opacity: .8;
+}
