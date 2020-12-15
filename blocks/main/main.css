@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 600px;
+  max-height: 717px;
   background-image: url(../../resources/images/main-image.png);
   background-size: contain;
   background-repeat: no-repeat;
