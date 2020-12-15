@@ -1,9 +1,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
-  max-height: 717px;
+  height: 717px;
   background-image: url(../../resources/images/main-image.png);
   background-size: contain;
   background-repeat: no-repeat;
