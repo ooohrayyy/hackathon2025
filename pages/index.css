@@ -1,3 +1,7 @@
 /* Подключаем normalize.css */
 
 @import url(../resources/vendor/normalize.css);
+
+/* Подключаем блок root */
+
+@import url(../blocks/root/root.css);
