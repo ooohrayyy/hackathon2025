@@ -23,3 +23,11 @@
   font-display: swap;
   src: url(./Roboto/Roboto-Bold.ttf) format("opentype");
 }
+
+@font-face {
+  font-family: Amaranth;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./Amaranth/Amaranth-Regular.ttf) format("opentype");
+}

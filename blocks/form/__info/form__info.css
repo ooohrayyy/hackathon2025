@@ -1,0 +1,15 @@
+.form__info {
+  width: 506px;
+  min-height: 76px;
+  margin: 16px 0 56px;
+  font-family: Amaranth, Arial, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, .5);
+}
+
+@media screen and (max-height: 999px) {
+  .form__info {
+    min-height: 0;
+    font-size: 14px;
+  }
+}
