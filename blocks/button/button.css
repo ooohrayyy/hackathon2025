@@ -13,3 +13,8 @@
 .button:hover {
   opacity: .8;
 }
+
+.button:disabled {
+  color: rgb(255, 254, 254);
+  background-color: rgba(89, 161, 242, .4);
+}
