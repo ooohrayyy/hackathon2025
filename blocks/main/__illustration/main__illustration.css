@@ -1,9 +1,4 @@
 .main__illustration {
   width: 611px;
   height: 490px;
-  /* margin-top: 30px; */
-  background-image: url(../../../resources/images/backgrounds/bckg1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }

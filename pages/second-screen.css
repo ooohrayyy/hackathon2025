@@ -30,9 +30,9 @@
 @import url(../blocks/main/__form-container/main__form-container.css);
 @import url(../blocks/main/__subtitle/main__subtitle.css);
 @import url(../blocks/main/__illustration/main__illustration.css);
-@import url(../blocks/main/__illustration/_page/main__illustration_page_one.css);
+@import url(../blocks/main/__illustration/_page/main__illustration_page_two.css);
 @import url(../blocks/main/__progress-bar/main__progress-bar.css);
-@import url(../blocks/main/__progress-bar/_step/main__progress-bar_step_one.css);
+@import url(../blocks/main/__progress-bar/_step/main__progress-bar_step_two.css);
 
 /* Подключаем блок footer и его компоненты */
 
@@ -47,10 +47,14 @@
 
 @import url(../blocks/button/button.css);
 @import url(../blocks/button/_type/button_type_next.css);
+@import url(../blocks/button/_type/button_type_back.css);
 
 /* Подключаем блок form и его компоненты */
 
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__input/_type/form__input_type_radio.css);
 @import url(../blocks/form/__label/form__label.css);
 @import url(../blocks/form/__info/form__info.css);
+@import url(../blocks/form/__fieldset/form__fieldset.css);
+@import url(../blocks/form/__buttons/form__buttons.css);

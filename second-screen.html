@@ -9,7 +9,7 @@
     <meta name="author" content="Михаил Яненко">
     <meta name="author" content="Александр Удинкан">
     <meta name="author" content="Анна Кухилава">
-    <link href="./pages/first-screen.css" rel="stylesheet">
+    <link href="./pages/second-screen.css" rel="stylesheet">
     <title>ГП-2025 – Создание инициативы</title>
   </head>
   <body class="root">
@@ -25,21 +25,26 @@
     </header>
     <main class="main main_page_one root__main">
       <div class="main__pic-container">
-        <h2 class="main__subtitle">Давай создадим инициативу</h2>
-        <div class="main__illustration main__illustration_page_one"></div>
+        <h2 class="main__subtitle">Из какой это оперы?</h2>
+        <div class="main__illustration main__illustration_page_two"></div>
       </div>
       <div class="main__form-container">
-        <div class="main__progress-bar main__progress-bar_step_one"></div>
-        <form class="form form_step_one">
-          <label class="form__label" for="initiative">Назови инициативу</label>
-          <input class="form__input" type="text" name="initiative">
-          <label class="form__label" for="username">Введи имя</label>
-          <input class="form__input" type="text" name="username" placeholder="ФИО">
-          <label class="form__label" for="usermail">Укажи почту</label>
-          <input class="form__input" type="e-mail" name="usermail" placeholder="e-mail">
-          <p class="form__info">Мы не передаём данные третьим лицам и коммерческим организациям. Тебе не будут писать мошенники и приходить спам. 
-          Это сделано для того, чтобы ты мог получать уведомления о статусе своей инициативы.</p>
-          <button class="button button_type_next">Дальше</button>
+        <div class="main__progress-bar main__progress-bar_step_two"></div>
+        <form class="form form_step_two">
+          <label class="form__label" for="">Выбери категорию</label>
+          <fieldset class="form__fieldset">
+            <input class="form__input form__input_type_radio" type="radio" name="category" value="Образование">
+            <input class="form__input form__input_type_radio" type="radio" name="category" value="Здоровье">
+            <input class="form__input form__input_type_radio" type="radio" name="category" value="Экология">
+            <input class="form__input form__input_type_radio" type="radio" name="category" value="Право">
+            <input class="form__input form__input_type_radio" type="radio" name="category" value="Общество">
+            <input class="form__input form__input_type_radio" type="radio" name="category" value="Государство">
+          </fieldset>
+          <p class="form__info">Можно выбрать только одну категорию.</p>
+          <div class="form__buttons">
+            <button class="button button_type_back" disabled>Назад</button>
+            <button class="button button_type_next">Дальше</button>
+          </div>
         </form>
       </div>
     </main>
