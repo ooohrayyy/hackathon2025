@@ -1,11 +1,4 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   height: 717px;
-  background-image: url(../../resources/images/main-image.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
 }
