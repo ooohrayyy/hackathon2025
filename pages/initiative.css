@@ -47,6 +47,9 @@
 @import url(../blocks/initiative/__labels/initiative__labels.css);
 @import url(../blocks/initiative/__support-count/initiative__support-count.css);
 @import url(../blocks/initiative/__support-target/initiative__support-target.css);
+@import url(../blocks/initiative/__share/initiative__share.css);
+@import url(../blocks/initiative/__share-item/initiative__share-item.css);
+@import url(../blocks/initiative/__share-link/initiative__share-link.css);
 
 /* Подключаем блок comment и его компоненты */
 

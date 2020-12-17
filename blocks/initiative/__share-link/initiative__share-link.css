@@ -1,0 +1,7 @@
+.initiative__share-link {
+  transition: .2s linear;
+}
+
+.initiative__share-link:hover {
+  opacity: .8;
+}
