@@ -40,7 +40,20 @@
 @import url(../blocks/initiative/__image/initiative__image.css);
 @import url(../blocks/initiative/__text/initiative__text.css);
 @import url(../blocks/initiative/__comments-title/initiative__comments-title.css);
+@import url(../blocks/initiative/__more-comments/initiative__more-comments.css);
 @import url(../blocks/initiative/__aside/initiative__aside.css);
+
+/* Подключаем блок comment и его компоненты */
+
+@import url(../blocks/comment/comment.css);
+@import url(../blocks/comment/__title/comment__title.css);
+@import url(../blocks/comment/__userpic/comment__userpic.css);
+@import url(../blocks/comment/__author/comment__author.css);
+@import url(../blocks/comment/__time/comment__time.css);
+@import url(../blocks/comment/__text/comment__text.css);
+@import url(../blocks/comment/__reaction/comment__reaction.css);
+@import url(../blocks/comment/__like/comment__like.css);
+@import url(../blocks/comment/__like-count/comment__like-count.css);
 
 /* Подключаем блок footer и его компоненты */
 
@@ -55,3 +68,4 @@
 
 @import url(../blocks/button/button.css);
 @import url(../blocks/button/_type/button_type_create.css);
+@import url(../blocks/button/_type/button_type_comment.css);

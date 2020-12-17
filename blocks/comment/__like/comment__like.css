@@ -1,0 +1,9 @@
+.comment__like {
+  width: 23px;
+  height: 19px;
+  padding: 0;
+  margin-right: 9px;
+  border: none;
+  background-image: url('../../../resources/images/like-inactive.svg');
+  background-color: transparent;
+}
