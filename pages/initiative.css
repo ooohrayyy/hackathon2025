@@ -50,6 +50,13 @@
 @import url(../blocks/initiative/__share/initiative__share.css);
 @import url(../blocks/initiative/__share-item/initiative__share-item.css);
 @import url(../blocks/initiative/__share-link/initiative__share-link.css);
+@import url(../blocks/initiative/__actual/initiative__actual.css);
+@import url(../blocks/initiative/__actual-title/initiative__actual-title.css);
+@import url(../blocks/initiative/__actual-card/initiative__actual-card.css);
+@import url(../blocks/initiative/__actual-image/initiative__actual-image.css);
+@import url(../blocks/initiative/__actual-card-texts/initiative__actual-card-texts.css);
+@import url(../blocks/initiative/__actual-card-title/initiative__actual-card-title.css);
+@import url(../blocks/initiative/__actual-supporters/initiative__actual-supporters.css);
 
 /* Подключаем блок comment и его компоненты */
 

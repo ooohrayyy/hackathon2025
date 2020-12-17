@@ -1,0 +1,9 @@
+.initiative__actual-card {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.initiative__actual-card:first-of-type {
+  margin-top: 32px;
+}

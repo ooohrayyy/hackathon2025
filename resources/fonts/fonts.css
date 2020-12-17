@@ -19,6 +19,14 @@
 @font-face {
   font-family: Roboto;
   font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./Roboto/Roboto-Medium.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url(./Roboto/Roboto-Bold.ttf) format("opentype");
