@@ -42,6 +42,11 @@
 @import url(../blocks/initiative/__comments-title/initiative__comments-title.css);
 @import url(../blocks/initiative/__more-comments/initiative__more-comments.css);
 @import url(../blocks/initiative/__aside/initiative__aside.css);
+@import url(../blocks/initiative/__support/initiative__support.css);
+@import url(../blocks/initiative/__support-bar/initiative__support-bar.css);
+@import url(../blocks/initiative/__labels/initiative__labels.css);
+@import url(../blocks/initiative/__support-count/initiative__support-count.css);
+@import url(../blocks/initiative/__support-target/initiative__support-target.css);
 
 /* Подключаем блок comment и его компоненты */
 
