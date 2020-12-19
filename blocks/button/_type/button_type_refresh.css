@@ -6,3 +6,7 @@
   color: #59a1f2;
   background-color: transparent;
 }
+
+.button_type_refresh:hover {
+  box-shadow: none;
+}
