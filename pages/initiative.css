@@ -22,15 +22,6 @@
 @import url(../blocks/header/__list/header__list.css);
 @import url(../blocks/header/__list-item/header__list-item.css);
 @import url(../blocks/header/__link/header__link.css);
-@import url(../blocks/header/__link/_active/header__link_active.css);
-
-/* Подключаем блок main и его компоненты */
-
-@import url(../blocks/main/main.css);
-@import url(../blocks/main/_page/main_page_index.css);
-@import url(../blocks/main/__title/main__title.css);
-@import url(../blocks/main/__title/_bold/main__title_bold.css);
-@import url(../blocks/main/__text/main__text.css);
 
 /* Подключаем блок initiative и его компоненты */
 
@@ -89,13 +80,11 @@
 @import url(../blocks/footer/__list/footer__list.css);
 @import url(../blocks/footer/__list-item/footer__list-item.css);
 @import url(../blocks/footer/__link/footer__link.css);
-@import url(../blocks/footer/__icon/footer__icon.css);
 
 /* Подключаем блок button и его компоненты */
 
 @import url(../blocks/button/button.css);
 @import url(../blocks/button/__refresh-icon/button__refresh-icon.css);
-@import url(../blocks/button/_type/button_type_create.css);
 @import url(../blocks/button/_type/button_type_comment.css);
 @import url(../blocks/button/_type/button_type_support.css);
 @import url(../blocks/button/_type/button_type_refresh.css);
