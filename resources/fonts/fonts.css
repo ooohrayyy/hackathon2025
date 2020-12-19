@@ -3,17 +3,17 @@
 @font-face {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
-  src: url(./Roboto/Roboto-Regular.ttf) format("opentype");
+  src: url(./Roboto/Roboto-Light.ttf) format("opentype");
 }
 
 @font-face {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-display: swap;
-  src: url(./Roboto/Roboto-Light.ttf) format("opentype");
+  src: url(./Roboto/Roboto-Regular.ttf) format("opentype");
 }
 
 @font-face {
@@ -31,6 +31,8 @@
   font-display: swap;
   src: url(./Roboto/Roboto-Bold.ttf) format("opentype");
 }
+
+/* Подключаем Amaranth */
 
 @font-face {
   font-family: Amaranth;
