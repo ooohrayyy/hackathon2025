@@ -25,7 +25,6 @@
 /* Подключаем блок main и его компоненты */
 
 @import url(../blocks/main/main.css);
-@import url(../blocks/main/_page/main_page_one.css);
 @import url(../blocks/main/__pic-container/main__pic-container.css);
 @import url(../blocks/main/__form-container/main__form-container.css);
 @import url(../blocks/main/__subtitle/main__subtitle.css);
