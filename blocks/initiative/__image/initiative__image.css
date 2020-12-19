@@ -1,4 +1,6 @@
 .initiative__image {
+  display: block;
   width: 503px;
   height: 251px;
+  margin-bottom: 13px;
 }
