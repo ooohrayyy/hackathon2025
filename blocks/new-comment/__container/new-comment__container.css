@@ -1,0 +1,13 @@
+.new-comment__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  max-width: 1330px;
+  max-height: 873px;
+  padding: 62px 75px 42px;
+  margin-top: 15px;
+  border-radius: 20px;
+  box-shadow: -5px 15px 17px 0 rgba(116, 156, 201, .41);
+  background-color: white;
+}

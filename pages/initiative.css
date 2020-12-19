@@ -13,6 +13,7 @@
 @import url(../blocks/root/__header/root__header.css);
 @import url(../blocks/root/__main/root__main.css);
 @import url(../blocks/root/__footer/root__footer.css);
+@import url(../blocks/root/__new-comment/root__new-comment.css);
 
 /* Подключаем блок header и его компоненты */
 
@@ -70,6 +71,17 @@
 @import url(../blocks/comment/__like/comment__like.css);
 @import url(../blocks/comment/__like-count/comment__like-count.css);
 
+/* Подключаем блок new-comment и его компоненты */
+
+@import url(../blocks/new-comment/new-comment.css);
+@import url(../blocks/new-comment/_visible/new-comment_visible.css);
+@import url(../blocks/new-comment/__container/new-comment__container.css);
+@import url(../blocks/new-comment/__header/new-comment__header.css);
+@import url(../blocks/new-comment/__fieldset/new-comment__fieldset.css);
+@import url(../blocks/new-comment/__input/new-comment__input.css);
+@import url(../blocks/new-comment/__choice/new-comment__choice.css);
+@import url(../blocks/new-comment/__option/new-comment__option.css);
+
 /* Подключаем блок footer и его компоненты */
 
 @import url(../blocks/footer/footer.css);
@@ -82,6 +94,12 @@
 /* Подключаем блок button и его компоненты */
 
 @import url(../blocks/button/button.css);
+@import url(../blocks/button/__refresh-icon/button__refresh-icon.css);
 @import url(../blocks/button/_type/button_type_create.css);
 @import url(../blocks/button/_type/button_type_comment.css);
 @import url(../blocks/button/_type/button_type_support.css);
+@import url(../blocks/button/_type/button_type_refresh.css);
+
+/* Подключаем блок close */
+
+@import url(../blocks/close/close.css);

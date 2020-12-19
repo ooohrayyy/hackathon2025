@@ -1,0 +1,15 @@
+.close {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  background-color: transparent;
+  background-image: url(../../resources/images/close.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.close:hover {
+  opacity: .8;
+}

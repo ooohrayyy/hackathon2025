@@ -218,5 +218,25 @@
         </li>
       </ul>
     </footer>
+    <div class="new-comment root__new-comment">
+      <form class="new-comment__container">
+        <section class="new-comment__header">
+          <fieldset class="new-comment__fieldset">
+            <input class="new-comment__input" type="text" placeholder="Ваше имя">
+            <input class="new-comment__input" type="email" placeholder="Почта">
+          </fieldset>
+          <button class="button button_type_comment">Комментировать</button>
+          <button class="close"></button>
+        </section>
+        <section class="new-comment__choice">
+          <input class="new-comment__option" type="radio" name="comment-option">
+          <input class="new-comment__option" type="radio" name="comment-option">
+          <input class="new-comment__option" type="radio" name="comment-option">
+        </section>
+        <button class="button button_type_refresh">Сгенерировать другой стих
+          <img class="button__refresh-icon" src="./resources/images/refresh.svg" alt="Обновить стихи" width="13" height="15">
+        </button>
+      </form>
+    </div>
   </body>
 </html>

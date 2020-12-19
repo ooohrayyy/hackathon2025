@@ -1,0 +1,4 @@
+.new-comment__header {
+  display: flex;
+  justify-content: flex-start;
+}
