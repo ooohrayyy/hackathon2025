@@ -1,6 +1,13 @@
+const headerLinks = document.querySelectorAll('.header__link');
 const nextButtons = document.querySelectorAll('.button_type_next');
 const backButtons = document.querySelectorAll('.button_type_back');
 const socialButtons = document.querySelectorAll('.footer__link');
+
+headerLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    alert('Эти ссылки пока не работают');
+  });
+});
 
 nextButtons.forEach((button) => {
   button.addEventListener('click', (evt) => {
