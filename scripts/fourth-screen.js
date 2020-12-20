@@ -20,5 +20,5 @@ nextMove.addEventListener('click', (evt) => {
 
 generateRhymes.addEventListener('click', (evt) => {
   evt.preventDefault();
-  alert('Пока генерировать комментарии нельзя');
+  alert('Пока генерировать обращения нельзя');
 });
