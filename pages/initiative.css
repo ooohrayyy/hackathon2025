@@ -1,0 +1,95 @@
+/* Подключаем normalize.css */
+
+@import url(../resources/vendor/normalize.css);
+
+/* Подключаем шрифты */
+
+@import url(../resources/fonts/fonts.css);
+
+/* Подключаем блок root */
+
+@import url(../blocks/root/root.css);
+@import url(../blocks/root/_initiative/root_initiative.css);
+@import url(../blocks/root/__initiative/root__initiative.css);
+@import url(../blocks/root/__header/root__header.css);
+@import url(../blocks/root/__main/root__main.css);
+@import url(../blocks/root/__footer/root__footer.css);
+@import url(../blocks/root/__new-comment/root__new-comment.css);
+@import url(../blocks/root/__close/root__close.css);
+
+/* Подключаем блок header и его компоненты */
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__list/header__list.css);
+@import url(../blocks/header/__list-item/header__list-item.css);
+@import url(../blocks/header/__link/header__link.css);
+
+/* Подключаем блок initiative и его компоненты */
+
+@import url(../blocks/initiative/__title/initiative__title.css);
+@import url(../blocks/initiative/__container/initiative__container.css);
+@import url(../blocks/initiative/__main/initiative__main.css);
+@import url(../blocks/initiative/__image/initiative__image.css);
+@import url(../blocks/initiative/__text/initiative__text.css);
+@import url(../blocks/initiative/__comments-title/initiative__comments-title.css);
+@import url(../blocks/initiative/__more-comments/initiative__more-comments.css);
+@import url(../blocks/initiative/__aside/initiative__aside.css);
+@import url(../blocks/initiative/__support-container/initiative__support-container.css);
+@import url(../blocks/initiative/__support-bar/initiative__support-bar.css);
+@import url(../blocks/initiative/__labels/initiative__labels.css);
+@import url(../blocks/initiative/__support-count/initiative__support-count.css);
+@import url(../blocks/initiative/__support-target/initiative__support-target.css);
+@import url(../blocks/initiative/__share/initiative__share.css);
+@import url(../blocks/initiative/__share-item/initiative__share-item.css);
+@import url(../blocks/initiative/__share-link/initiative__share-link.css);
+@import url(../blocks/initiative/__actual/initiative__actual.css);
+@import url(../blocks/initiative/__actual-title/initiative__actual-title.css);
+@import url(../blocks/initiative/__actual-card/initiative__actual-card.css);
+@import url(../blocks/initiative/__actual-image/initiative__actual-image.css);
+@import url(../blocks/initiative/__actual-card-texts/initiative__actual-card-texts.css);
+@import url(../blocks/initiative/__actual-card-title/initiative__actual-card-title.css);
+@import url(../blocks/initiative/__actual-supporters/initiative__actual-supporters.css);
+
+/* Подключаем блок comment и его компоненты */
+
+@import url(../blocks/comment/comment.css);
+@import url(../blocks/comment/__title/comment__title.css);
+@import url(../blocks/comment/__userpic/comment__userpic.css);
+@import url(../blocks/comment/__author/comment__author.css);
+@import url(../blocks/comment/__time/comment__time.css);
+@import url(../blocks/comment/__text/comment__text.css);
+@import url(../blocks/comment/__reaction/comment__reaction.css);
+@import url(../blocks/comment/__like/comment__like.css);
+@import url(../blocks/comment/__like-count/comment__like-count.css);
+
+/* Подключаем блок new-comment и его компоненты */
+
+@import url(../blocks/new-comment/new-comment.css);
+@import url(../blocks/new-comment/_visible/new-comment_visible.css);
+@import url(../blocks/new-comment/__container/new-comment__container.css);
+@import url(../blocks/new-comment/__header/new-comment__header.css);
+@import url(../blocks/new-comment/__fieldset/new-comment__fieldset.css);
+@import url(../blocks/new-comment/__input/new-comment__input.css);
+@import url(../blocks/new-comment/__choice/new-comment__choice.css);
+@import url(../blocks/new-comment/__option/new-comment__option.css);
+
+/* Подключаем блок footer и его компоненты */
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__author/footer__author.css);
+@import url(../blocks/footer/__list/footer__list.css);
+@import url(../blocks/footer/__list-item/footer__list-item.css);
+@import url(../blocks/footer/__link/footer__link.css);
+
+/* Подключаем блок button и его компоненты */
+
+@import url(../blocks/button/button.css);
+@import url(../blocks/button/__refresh-icon/button__refresh-icon.css);
+@import url(../blocks/button/_type/button_type_comment.css);
+@import url(../blocks/button/_type/button_type_support.css);
+@import url(../blocks/button/_type/button_type_refresh.css);
+
+/* Подключаем блок close */
+
+@import url(../blocks/close/close.css);

@@ -1,0 +1,7 @@
+.form__fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  width: 506px;
+  padding: 0;
+  border: none;
+}

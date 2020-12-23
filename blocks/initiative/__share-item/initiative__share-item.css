@@ -1,0 +1,7 @@
+.initiative__share-item {
+  margin-right: 16px;
+}
+
+.initiative__share-item:last-of-type {
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+.form__input_type_photo {
+  overflow: hidden;
+  width: 153px;
+  height: 119px;
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.form__input_type_photo:before {
+  content: url(../../../../resources/images/photo.png);
+  width: 153px;
+  height: 119px;
+}

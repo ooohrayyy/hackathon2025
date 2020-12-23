@@ -1,0 +1,4 @@
+.form__photo-label {
+  display: flex;
+  justify-content: flex-start;
+}

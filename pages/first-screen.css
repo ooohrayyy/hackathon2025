@@ -1,0 +1,53 @@
+/* Подключаем normalize.css */
+
+@import url(../resources/vendor/normalize.css);
+
+/* Подключаем шрифты */
+
+@import url(../resources/fonts/fonts.css);
+
+/* Подключаем блок root */
+
+@import url(../blocks/root/root.css);
+@import url(../blocks/root/__header/root__header.css);
+@import url(../blocks/root/__main/root__main.css);
+@import url(../blocks/root/__footer/root__footer.css);
+
+/* Подключаем блок header и его компоненты */
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__list/header__list.css);
+@import url(../blocks/header/__list-item/header__list-item.css);
+@import url(../blocks/header/__link/header__link.css);
+
+/* Подключаем блок main и его компоненты */
+
+@import url(../blocks/main/main.css);
+@import url(../blocks/main/__pic-container/main__pic-container.css);
+@import url(../blocks/main/__form-container/main__form-container.css);
+@import url(../blocks/main/__subtitle/main__subtitle.css);
+@import url(../blocks/main/__illustration/main__illustration.css);
+@import url(../blocks/main/__illustration/_page/main__illustration_page_one.css);
+@import url(../blocks/main/__progress-bar/main__progress-bar.css);
+@import url(../blocks/main/__progress-bar/_step/main__progress-bar_step_one.css);
+
+/* Подключаем блок footer и его компоненты */
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__author/footer__author.css);
+@import url(../blocks/footer/__list/footer__list.css);
+@import url(../blocks/footer/__list-item/footer__list-item.css);
+@import url(../blocks/footer/__link/footer__link.css);
+
+/* Подключаем блок button и его компоненты */
+
+@import url(../blocks/button/button.css);
+@import url(../blocks/button/_type/button_type_next.css);
+
+/* Подключаем блок form и его компоненты */
+
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__label/form__label.css);
+@import url(../blocks/form/__info/form__info.css);

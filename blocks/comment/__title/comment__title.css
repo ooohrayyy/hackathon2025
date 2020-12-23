@@ -1,0 +1,6 @@
+.comment__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 13px;
+}
