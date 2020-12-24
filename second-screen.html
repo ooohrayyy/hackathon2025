@@ -95,26 +95,5 @@
     </footer>
     <script src="./scripts/common.js"></script>
     <script src="./scripts/second-screen.js"></script>
-    <script>
-      const categoryButtons = document.querySelectorAll('.category');
-
-      categoryButtons.forEach((button) => {
-        button.addEventListener('click', (evt) => {
-          evt.preventDefault();
-
-          const buttonsArray = Array.from(categoryButtons);
-          const otherButtons = buttonsArray.filter(button => !(button === evt.target));
-
-          otherButtons.forEach(button => {
-            button.classList.remove('category_active');
-          });
-
-          const buttonValue = button.querySelector('.category__name').textContent;
-          console.log(buttonValue);
-
-          button.classList.toggle('category_active');
-        });
-      });
-    </script>
   </body>
 </html>
