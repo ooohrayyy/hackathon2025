@@ -1,0 +1,10 @@
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 152px;
+  height: 142px;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+}
