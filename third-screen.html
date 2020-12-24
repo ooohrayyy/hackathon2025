@@ -34,10 +34,19 @@
         <div class="main__progress-bar main__progress-bar_step_three"></div>
         <form class="form form_step_two">
           <label class="form__label" for="">Выбери подкатегорию</label>
-          <fieldset class="form__fieldset">
-            <input class="form__input form__input_type_radio" type="radio" name="category" value="Образование">
-            <input class="form__input form__input_type_radio" type="radio" name="category" value="Здоровье">
-            <input class="form__input form__input_type_radio" type="radio" name="category" value="Экология">
+          <fieldset class="form__categories">
+            <button class="category">
+              <div class="category__icon"></div>
+              <p class="category__name">Образование</p>
+            </button>
+            <button class="category">
+              <div class="category__icon"></div>
+              <p class="category__name">Экология</p>
+            </button>
+            <button class="category">
+              <div class="category__icon"></div>
+              <p class="category__name">Здоровье</p>
+            </button>
           </fieldset>
           <p class="form__info">Ты всегда можешь вернуться и изменить свой выбор, нажав кнопку «Назад».</p>
           <label class="form__photo-label">
@@ -81,5 +90,26 @@
     </footer>
     <script src="./scripts/common.js"></script>
     <script src="./scripts/third-screen.js"></script>
+    <script>
+      const categoryButtons = document.querySelectorAll('.category');
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener('click', (evt) => {
+          evt.preventDefault();
+
+          const buttonsArray = Array.from(categoryButtons);
+          const otherButtons = buttonsArray.filter(button => !(button === evt.target));
+
+          otherButtons.forEach(button => {
+            button.classList.remove('category_active');
+          });
+
+          const buttonValue = button.querySelector('.category__name').textContent;
+          console.log(buttonValue);
+
+          button.classList.toggle('category_active');
+        });
+      });
+    </script>
   </body>
 </html>

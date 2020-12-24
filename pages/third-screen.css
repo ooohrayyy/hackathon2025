@@ -50,7 +50,7 @@
 
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__input/form__input.css);
-@import url(../blocks/form/__input/_type/form__input_type_radio.css);
+@import url(../blocks/form/__categories/form__categories.css);
 @import url(../blocks/form/__input/_type/form__input_type_photo.css);
 @import url(../blocks/form/__label/form__label.css);
 @import url(../blocks/form/__photo-label/form__photo-label.css);
@@ -60,3 +60,10 @@
 @import url(../blocks/form/__info/form__info.css);
 @import url(../blocks/form/__fieldset/form__fieldset.css);
 @import url(../blocks/form/__buttons/form__buttons.css);
+
+/* Подключаем блок category и его компоненты */
+
+@import url(../blocks/category/category.css);
+@import url(../blocks/category/_active/category_active.css);
+@import url(../blocks/category/__icon/category__icon.css);
+@import url(../blocks/category/__name/category__name.css);
