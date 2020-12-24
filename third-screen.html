@@ -34,20 +34,20 @@
         <div class="main__progress-bar main__progress-bar_step_three"></div>
         <form class="form form_step_two">
           <label class="form__label" for="">Выбери подкатегорию</label>
-          <fieldset class="form__categories">
+          <section class="form__categories">
             <button class="category">
               <div class="category__icon"></div>
-              <p class="category__name">Образование</p>
+              <p class="category__name"></p>
             </button>
             <button class="category">
               <div class="category__icon"></div>
-              <p class="category__name">Экология</p>
+              <p class="category__name"></p>
             </button>
             <button class="category">
               <div class="category__icon"></div>
-              <p class="category__name">Здоровье</p>
+              <p class="category__name"></p>
             </button>
-          </fieldset>
+          </section>
           <p class="form__info">Ты всегда можешь вернуться и изменить свой выбор, нажав кнопку «Назад».</p>
           <label class="form__photo-label">
             <input class="form__input form__input_type_photo" type="file" name="photo">
@@ -88,6 +88,12 @@
         </li>
       </ul>
     </footer>
+    <template id="template-subcategory">
+      <button class="category">
+        <div class="category__icon"></div>
+        <p class="category__name">Имя подкатегории</p>
+      </button>
+    </template>
     <script src="./scripts/common.js"></script>
     <script src="./scripts/third-screen.js"></script>
   </body>
