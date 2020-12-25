@@ -2,6 +2,7 @@
 
 const initiativeTitle = document.querySelector('.initiative__title'); // Название инициативы
 const mainIllustration = document.querySelector('.initiative__image'); // Иллюстрация к инициативе
+const initiativeText = document.querySelector('.initiative__text'); // Текст инициативы
 
 const supportButton = document.querySelector('.button_type_support'); // Кнопка «Подписать»
 const shareButtons = document.querySelectorAll('.initiative__share-link'); // Кнопки шеринга в соцсетях
@@ -42,6 +43,14 @@ function putName () {
 function putIllustration () { // Загрузка иллюстрации из localStorage
   if (localStorage.initiative_image) {
     mainIllustration.src = localStorage.initiative_image;
+  }
+}
+
+function putText () {
+  if (localStorage.initiative_text) {
+    initiativeText.textContent = localStorage.initiative_text;
+  } else {
+    initiativeText.textContent = '*Текста нет*';
   }
 }
 
@@ -101,3 +110,4 @@ commentOptions.forEach((option) => { // Слушатели кнопок опци
 
 putName();
 putIllustration();
+putText();
