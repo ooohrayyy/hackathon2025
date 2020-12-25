@@ -1,5 +1,6 @@
 // * Объявляем переменные
 
+const initiativeTitle = document.querySelector('.initiative__title'); // Название инициативы
 const mainIllustration = document.querySelector('.initiative__image'); // Иллюстрация к инициативе
 
 const supportButton = document.querySelector('.button_type_support'); // Кнопка «Подписать»
@@ -30,7 +31,15 @@ function saveUserInfo () { // Сохранение информации о по�
   localStorage.comment_usermail = usermailInput.value;
 }
 
-function putIllustration () {
+function putName () {
+  if (localStorage.initiative_image) {
+    initiativeTitle.textContent = localStorage.initiative_name;
+  } else {
+    initiativeTitle.textContent = '*Без названия*';
+  }
+}
+
+function putIllustration () { // Загрузка иллюстрации из localStorage
   if (localStorage.initiative_image) {
     mainIllustration.src = localStorage.initiative_image;
   }
@@ -90,4 +99,5 @@ commentOptions.forEach((option) => { // Слушатели кнопок опци
 
 // * Вызываем функции
 
+putName();
 putIllustration();
