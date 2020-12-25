@@ -8,8 +8,8 @@ const nextButton = document.querySelector('.button_type_next');
 
 function saveUserData () {
   const initiativeName = document.querySelector('#initiative_name').value;
-  const userName = document.querySelector('#username').value;
-  const userMail = document.querySelector('#user_email').value;
+  const userName = document.querySelector('#initiative_username').value;
+  const userMail = document.querySelector('#initiative_usermail').value;
 
   localStorage.initiative_name = initiativeName;
   localStorage.initiative_username = userName;

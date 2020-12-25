@@ -6,7 +6,7 @@ const newCommentButton = document.querySelector('.button_type_comment'); // Кн
 
 const commentsPopup = document.querySelector('.new-comment'); // Попап с коментариями
 const usernameInput = commentsPopup.querySelector('#comment_username'); // Инпут с именем пользователя
-const usermailInput = commentsPopup.querySelector('#comment_email'); // Инпут с почтой пользователя
+const usermailInput = commentsPopup.querySelector('#comment_usermail'); // Инпут с почтой пользователя
 const leaveCommentButton = commentsPopup.querySelector('.button_type_comment'); // Кнопка «Оставить комментарий»
 const closeFormButton = commentsPopup.querySelector('.close'); // Кнопка закрытия попапа с комментариями
 const generateRhymes = commentsPopup.querySelector('.button_type_refresh'); // Кнопка «Сгенерировать другой стих»
