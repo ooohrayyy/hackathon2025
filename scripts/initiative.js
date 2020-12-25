@@ -14,50 +14,55 @@ const commentOptions = commentsPopup.querySelectorAll('.new-comment__option'); /
 
 // * Объявляем функции
 
-function openCommentsPopup() {
+function openCommentsPopup() { // Открытие попапа с комментариями
   commentsPopup.classList.add('new-comment_visible');
 }
 
-function closeCommentsPopup (evt) {
+function closeCommentsPopup (evt) { // Закрытие попапа с комментариями
   evt.preventDefault();
   commentsPopup.classList.remove('new-comment_visible');
 }
 
-function saveUserInfo () {
+function saveUserInfo () { // Сохранение информации о пользователе
   localStorage.comment_username = usernameInput.value;
   localStorage.comment_usermail = usermailInput.value;
 }
 
 // * Вешаем слушатели событий
 
-supportButton.addEventListener('click', () => {
+supportButton.addEventListener('click', () => { // Слушатель кнопки «Подписать»
   alert('Тут будет новое окно');
 });
 
-shareButtons.forEach((button) => {
+shareButtons.forEach((button) => { // Слушатель кнопок шеринга в соцсетях
   button.addEventListener('click', () => {
     alert('Тут будет шеринг в соцсетях');
   });
 });
 
-newCommentButton.addEventListener('click', openCommentsPopup);
+newCommentButton.addEventListener('click', openCommentsPopup); // Слушатель кнопки «Комментировать» на странице
 
-leaveCommentButton.addEventListener('click', (evt) => {
+leaveCommentButton.addEventListener('click', (evt) => { // Слушатель кнопки «Комментировать» в попапе
   evt.preventDefault();
 
-  saveUserInfo();
+  const activeOption = document.querySelector('.new-comment__option_active');
 
-  alert('Пока оставлять комментарии нельзя');
+  if (activeOption) {
+    saveUserInfo();
+    alert('Пока оставлять комментарии нельзя');
+  } else {
+    alert('Пожалуйста, выберите подходящий комментарий');
+  }
 });
 
-closeFormButton.addEventListener('click', closeCommentsPopup);
+closeFormButton.addEventListener('click', closeCommentsPopup); // Слушатель кнопки закрытия попапа
 
-generateRhymes.addEventListener('click', (evt) => {
+generateRhymes.addEventListener('click', (evt) => { // Слушатель кнопки «Сгенерировать другие стихи»
   evt.preventDefault();
   alert('Пока генерировать комментарии нельзя');
 });
 
-commentOptions.forEach((option) => {
+commentOptions.forEach((option) => { // Слушатели кнопок опций
   option.addEventListener('click', (evt) => {
     evt.preventDefault();
 
