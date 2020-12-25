@@ -1,10 +1,14 @@
 // * Объявляем переменные
 
-const previousPage = 'second-screen.html';
-const nextPage = 'fourth-screen.html';
-const categoryButtons = document.querySelectorAll('.category');
-const subcategories = document.querySelectorAll('.category__name');
-const categoryName = localStorage.category;
+const previousPage = 'second-screen.html'; // Следующая страница
+const nextPage = 'fourth-screen.html'; // Предыдущая страница
+
+const categoryButtons = document.querySelectorAll('.category'); // Кнопки подкатегорий
+const subcategories = document.querySelectorAll('.category__name'); // Названия подкатегорий
+const categoryName = localStorage.category; // Выбранная категория
+
+const imageButton = document.querySelector('.form__photo-button'); // Кнопка выбора изображения
+const imagePreview = document.querySelector('.form__photo-label'); // Адрес превью иллюстрации
 
 // * Объявляем функции
 
@@ -49,7 +53,11 @@ function getSubcategories (category) {
 
 function getPicture () {
   const result = prompt('Введите ссылку на изображение');
-  localStorage.initiative_image = result;
+  return result;
+}
+
+function setImagePreview (src) {
+  imagePreview.src = src;
 }
 
 // * Вызываем функции
@@ -73,4 +81,13 @@ categoryButtons.forEach((button) => {
     localStorage.subcategory = buttonValue;
     button.classList.toggle('category_active');
   });
+});
+
+imageButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+
+  const imageSource = getPicture();
+
+  localStorage.initiative_image = imageSource;
+  setImagePreview(imageSource);
 });
