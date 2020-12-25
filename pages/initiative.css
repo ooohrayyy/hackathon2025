@@ -73,6 +73,10 @@
 @import url(../blocks/new-comment/__input/new-comment__input.css);
 @import url(../blocks/new-comment/__choice/new-comment__choice.css);
 @import url(../blocks/new-comment/__option/new-comment__option.css);
+@import url(../blocks/new-comment/__option/_active/new-comment__option_active.css);
+@import url(../blocks/new-comment/__image/new-comment__image.css);
+@import url(../blocks/new-comment/__text/new-comment__text.css);
+@import url(../blocks/new-comment/__author/new-comment__author.css);
 
 /* Подключаем блок footer и его компоненты */
 
