@@ -1,5 +1,7 @@
 // * Объявляем переменные
 
+const mainIllustration = document.querySelector('.initiative__image'); // Иллюстрация к инициативе
+
 const supportButton = document.querySelector('.button_type_support'); // Кнопка «Подписать»
 const shareButtons = document.querySelectorAll('.initiative__share-link'); // Кнопки шеринга в соцсетях
 const newCommentButton = document.querySelector('.button_type_comment'); // Кнопка «Комментировать»
@@ -26,6 +28,12 @@ function closeCommentsPopup (evt) { // Закрытие попапа с комм
 function saveUserInfo () { // Сохранение информации о пользователе
   localStorage.comment_username = usernameInput.value;
   localStorage.comment_usermail = usermailInput.value;
+}
+
+function putIllustration () {
+  if (localStorage.initiative_image) {
+    mainIllustration.src = localStorage.initiative_image;
+  }
 }
 
 // * Вешаем слушатели событий
@@ -79,3 +87,7 @@ commentOptions.forEach((option) => { // Слушатели кнопок опци
     option.classList.toggle('new-comment__option_active');
   });
 });
+
+// * Вызываем функции
+
+putIllustration();
