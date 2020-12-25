@@ -47,6 +47,11 @@ function getSubcategories (category) {
   }
 }
 
+function getPicture () {
+  const result = prompt('Введите ссылку на изображение');
+  localStorage.initiative_image = result;
+}
+
 // * Вызываем функции
 
 getSubcategories(categoryName);
