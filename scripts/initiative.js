@@ -1,3 +1,18 @@
+// * Подключаем стихи из внешнего источника
+
+let rhymes = {};
+
+const xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        rhymes = JSON.parse(this.responseText);
+    }
+};
+
+xmlhttp.open("GET", "https://raw.githubusercontent.com/IlyaGusev/PoetryCorpus/master/datasets/django/all_django.json", true);
+xmlhttp.send();
+
 // * Объявляем переменные
 
 const initiativeTitle = document.querySelector('.initiative__title'); // Название инициативы
@@ -20,6 +35,24 @@ const commentOptions = commentsPopup.querySelectorAll('.new-comment__option'); /
 
 function openCommentsPopup() { // Открытие попапа с комментариями
   commentsPopup.classList.add('new-comment_visible');
+}
+
+function refreshComments () { // Обновить стихи
+  commentOptions.forEach(option => {
+    console.log(option);
+
+    const commentTextField = option.querySelector('.new-comment__text');
+    const commentAuthor = option.querySelector('.new-comment__author');
+
+    const rand = Math.floor(Math.random() * rhymes.length);
+    const newObject = rhymes[rand];    
+
+    const newRhymes = newObject.fields.text;
+    const newAuthor = newObject.fields.author;
+
+    commentTextField.textContent = newRhymes;
+    commentAuthor.textContent = newAuthor;
+  });
 }
 
 function closeCommentsPopup (evt) { // Закрытие попапа с комментариями
@@ -85,7 +118,7 @@ closeFormButton.addEventListener('click', closeCommentsPopup); // Слушате
 
 generateRhymes.addEventListener('click', (evt) => { // Слушатель кнопки «Сгенерировать другие стихи»
   evt.preventDefault();
-  alert('Пока генерировать комментарии нельзя');
+  refreshComments();
 });
 
 commentOptions.forEach((option) => { // Слушатели кнопок опций
