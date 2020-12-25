@@ -8,8 +8,14 @@ function openPopup() {
   popup.classList.add('done_visible');
 }
 
+function saveText () {
+  const initiativeText = document.querySelector('.form__input_type_textarea').value;
+  localStorage.initiative_text = initiativeText;
+}
+
 doneButton.addEventListener('click', (evt) => {
   evt.preventDefault();
+  saveText();
   openPopup();
 });
 
