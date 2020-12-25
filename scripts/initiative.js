@@ -39,8 +39,6 @@ function openCommentsPopup() { // Открытие попапа с коммен�
 
 function refreshComments () { // Обновить стихи
   commentOptions.forEach(option => {
-    console.log(option);
-
     const commentTextField = option.querySelector('.new-comment__text');
     const commentAuthor = option.querySelector('.new-comment__author');
 
