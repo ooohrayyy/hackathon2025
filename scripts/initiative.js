@@ -33,7 +33,7 @@ function saveUserInfo () { // Сохранение информации о по�
 }
 
 function putName () {
-  if (localStorage.initiative_image) {
+  if (localStorage.initiative_name) {
     initiativeTitle.textContent = localStorage.initiative_name;
   } else {
     initiativeTitle.textContent = '*Без названия*';
