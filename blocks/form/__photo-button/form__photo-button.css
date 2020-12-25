@@ -1,7 +1,9 @@
-.form__photo-label {
+.form__photo-button {
   width: 153px;
   height: 119px;
   padding: 0;
   border: none;
   margin: 0;
+  background-color: white;
+  outline: none;
 }
