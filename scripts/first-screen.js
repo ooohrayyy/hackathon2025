@@ -12,8 +12,8 @@ function saveUserData () {
   const userMail = document.querySelector('#user_email').value;
 
   localStorage.initiative_name = initiativeName;
-  localStorage.username = userName;
-  localStorage.user_mail = userMail;
+  localStorage.initiative_username = userName;
+  localStorage.initiative_usermail = userMail;
 }
 
 // * Вешаем слушатели событий
