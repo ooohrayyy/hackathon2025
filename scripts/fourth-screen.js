@@ -15,7 +15,7 @@ doneButton.addEventListener('click', (evt) => {
 
 nextMove.addEventListener('click', (evt) => {
   evt.preventDefault();
-  window.open('initiative.html', '_self', false);
+  window.open('fresh-initiative.html', '_self', false);
 });
 
 generateRhymes.addEventListener('click', (evt) => {
