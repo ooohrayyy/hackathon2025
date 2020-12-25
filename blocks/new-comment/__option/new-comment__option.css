@@ -10,6 +10,7 @@
   box-shadow: -5px 15px 17px 0 rgba(116, 156, 201, .41);
   margin: 0 0 32px 0;
   background-color: white;
+  outline: none;
 }
 
 .new-comment__option:hover {
