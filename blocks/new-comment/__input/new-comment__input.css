@@ -1,0 +1,15 @@
+.new-comment__input {
+  display: block;
+  width: 382px;
+  height: 29px;
+  padding-left: 14px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  background-color: #f0f7ff;
+}
+
+.new-comment__input::placeholder {
+  color: #606060;
+}

@@ -1,0 +1,13 @@
+@import url(../resources/vendor/normalize.css);
+@import url(../resources/fonts/fonts.css);
+
+
+@import url(../blocks/about-project/about-project.css);
+@import url(../blocks/about-project/project/project.css);
+@import url(../blocks/about-project/about-project__title.css);
+@import url(../blocks/about-project/project/__container/project__container.css);
+@import url(../blocks/about-project/project/__container/_description/project__container_description.css);
+@import url(../blocks/about-project/project/__container/_subtitle/project__container_subtitle.css);
+@import url(../blocks/about-project/project/__img-container/_text/project__img-container_text.css);
+@import url(../blocks/about-project/project/__container/_root/_element/project__container_root_element.css);
+@import url(../blocks/about-project/project/__container/_defenition/project__container_defenition.css);

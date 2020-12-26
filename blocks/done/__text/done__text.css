@@ -1,0 +1,9 @@
+.done__text {
+  margin: 0;
+  font-size: 26px;
+  text-align: center;
+}
+
+.done__text:last-of-type {
+  margin-bottom: 30px;
+}

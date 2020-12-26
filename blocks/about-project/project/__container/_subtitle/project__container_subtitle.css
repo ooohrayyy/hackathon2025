@@ -1,0 +1,11 @@
+.project__container_subtitle {
+margin-bottom: 24px;
+font-size: 50px;
+line-height: 62px;
+font-family: RubikMonoOne;
+width: 560px;
+}
+
+.project__container_subtitle:last-of-type {
+margin-top: 116px;
+}

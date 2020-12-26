@@ -1,0 +1,32 @@
+.header__link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  transition: .2s linear;
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #59a1f2;
+  transition: .2s linear;
+}
+
+.header__link:hover {
+  color: #59a1f2;
+}
+
+.header__link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #59a1f2;
+  transition: .2s linear;
+}

@@ -1,0 +1,4 @@
+.new-comment__choice {
+  display: flex;
+  gap: 16px;
+}

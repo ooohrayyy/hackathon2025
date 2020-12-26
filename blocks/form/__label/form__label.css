@@ -1,0 +1,17 @@
+.form__label {
+  display: block;
+  margin-top: 24px;
+  font-family: Amaranth, Arial, sans-serif;
+  font-size: 18px;
+  color: rgba(0, 0, 0, .8);
+}
+
+.form__label:first-of-type {
+  margin-top: 0;
+}
+
+@media screen and (max-height: 999px) {
+  .form__label {
+    margin-top: 12px;
+  }
+}

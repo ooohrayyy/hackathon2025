@@ -1,0 +1,20 @@
+.new-comment__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 410px;
+  height: 338px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: -5px 15px 17px 0 rgba(116, 156, 201, .41);
+  margin: 0 0 32px 0;
+  overflow: scroll;
+  background-color: white;
+  outline: none;
+}
+
+.new-comment__option:hover {
+  border-radius: 10px;
+  box-shadow: -5px 15px 17px 0 rgba(116, 156, 201, .98);
+}
