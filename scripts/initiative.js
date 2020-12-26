@@ -33,24 +33,10 @@ const commentOptions = commentsPopup.querySelectorAll('.new-comment__option'); /
 
 // * Объявляем функции
 
+// -- Открытие и закрытие попапа
+
 function openCommentsPopup() { // Открытие попапа с комментариями
   commentsPopup.classList.add('new-comment_visible');
-}
-
-function refreshComments () { // Обновить стихи
-  commentOptions.forEach(option => {
-    const commentTextField = option.querySelector('.new-comment__text');
-    const commentAuthor = option.querySelector('.new-comment__author');
-
-    const rand = Math.floor(Math.random() * rhymes.length);
-    const newObject = rhymes[rand];    
-
-    const newRhymes = newObject.fields.text;
-    const newAuthor = newObject.fields.author;
-
-    commentTextField.textContent = newRhymes;
-    commentAuthor.textContent = newAuthor;
-  });
 }
 
 function closeCommentsPopup (evt) { // Закрытие попапа с комментариями
@@ -58,12 +44,9 @@ function closeCommentsPopup (evt) { // Закрытие попапа с комм
   commentsPopup.classList.remove('new-comment_visible');
 }
 
-function saveUserInfo () { // Сохранение информации о пользователе
-  localStorage.comment_username = usernameInput.value;
-  localStorage.comment_usermail = usermailInput.value;
-}
+// -- Отрисовка инициативы
 
-function putName () {
+function putName () { // Отрисовка названия инициативы
   if (localStorage.initiative_name) {
     initiativeTitle.textContent = localStorage.initiative_name;
   } else {
@@ -71,18 +54,131 @@ function putName () {
   }
 }
 
-function putIllustration () { // Загрузка иллюстрации из localStorage
+function putIllustration () { // Отрисовка иллюстрации к инициативе
   if (localStorage.initiative_image) {
     mainIllustration.src = localStorage.initiative_image;
   }
 }
 
-function putText () {
+function putText () { // Отрисовка текста инициативы
   if (localStorage.initiative_text) {
     initiativeText.textContent = localStorage.initiative_text;
   } else {
     initiativeText.textContent = '*Текста нет*';
   }
+}
+
+// -- Логика формирования комментариев
+
+function getRandomRhymeObject () { // Получить случаный объект со стихотворением
+  const rand = Math.floor(Math.random() * rhymes.length);
+  const newObject = rhymes[rand];
+  return newObject;
+}
+
+function checkName (name) { // Проверить имя автора на валидность
+  if (name == 'Валерий Брюсов' ||
+    name == 'Владимир Маяковский' ||
+    name == 'Илья Эренбург' ||
+    name == 'Владимир Высоцкий' ||
+    name == 'Зинаида Гиппиус' ||
+    name == 'Корней Чуковский' ||
+    name == 'Евгений Баратынский' ||
+    name == 'Афанасий Фет' ||
+    name == 'Игорь Северянин' ||
+    name == 'Анна Ахматова' ||
+    name == 'Сергей Есенин' ||
+    name == 'Александр Блок' ||
+    name == 'Николай Гумилев' ||
+    name == 'Белла Ахмадулина' ||
+    name == 'Велимир Хлебников') {
+      return true;
+    } else {
+      return false;
+    }
+}
+
+function putPhoto (author, option) { // Вставить фотографию автора
+  const authorPic = option.querySelector('.new-comment__image');
+
+  switch (author) {
+    case 'Валерий Брюсов':
+      authorPic.src = '../resources/images/authors/brusov.png';
+      break;
+    case 'Владимир Маяковский':
+      authorPic.src = '../resources/images/authors/mayak.png';
+      break;
+    case 'Илья Эренбург':
+      authorPic.src = '../resources/images/authors/erenburg.png';
+      break;
+    case 'Владимир Высоцкий':
+      authorPic.src = '../resources/images/authors/vys.png';
+      break;
+    case 'Зинаида Гиппиус':
+      authorPic.src = '../resources/images/authors/gippius.png';
+      break;
+    case 'Корней Чуковский':
+      authorPic.src = '../resources/images/authors/chuk.png';
+      break;
+    case 'Евгений Баратынский':
+      authorPic.src = '../resources/images/authors/barat.png';
+      break;
+    case 'Афанасий Фет':
+      authorPic.src = '../resources/images/authors/fet.png';
+      break;
+    case 'Игорь Северянин':
+      authorPic.src = '../resources/images/authors/sev.png';
+      break;
+    case 'Анна Ахматова':
+      authorPic.src = '../resources/images/authors/ah.png';
+      break;
+    case 'Сергей Есенин':
+      authorPic.src = '../resources/images/authors/es.png';
+      break;
+    case 'Александр Блок':
+      authorPic.src = '../resources/images/authors/blok.png';
+      break;
+    case 'Николай Гумилев':
+      author = 'Николай Гумилёв';
+      authorPic.src = '../resources/images/authors/gum.png';
+      break;
+    case 'Белла Ахмадулина':
+      authorPic.src = '../resources/images/authors/bella.png';
+      break;
+    case 'Велимир Хлебников':
+      authorPic.src = '../resources/images/authors/hleb.png';
+      break;
+    default:
+      authorPic.src = '../resources/images/userpic-placeholder.png';
+      refreshComments();
+  }
+}
+
+function refreshComments () { // Обновить варианты комментариев
+  commentOptions.forEach(option => {
+    const commentTextField = option.querySelector('.new-comment__text');
+    const commentAuthor = option.querySelector('.new-comment__author');
+
+    let newObject = getRandomRhymeObject();
+    let newRhymes = newObject.fields.text;
+    let newAuthor = newObject.fields.author;
+
+    while (!checkName(newAuthor)) {
+      newObject = getRandomRhymeObject();
+      newRhymes = newObject.fields.text;
+      newAuthor = newObject.fields.author;
+    }
+
+    putPhoto(newAuthor, option);
+
+    commentTextField.textContent = newRhymes;
+    commentAuthor.textContent = newAuthor;
+  });
+}
+
+function saveUserInfo () { // Сохранение пользовательской информации
+  localStorage.comment_username = usernameInput.value;
+  localStorage.comment_usermail = usermailInput.value;
 }
 
 // * Вешаем слушатели событий
