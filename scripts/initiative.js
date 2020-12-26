@@ -28,6 +28,7 @@ const usernameInput = commentsPopup.querySelector('#comment_username'); // Ин�
 const usermailInput = commentsPopup.querySelector('#comment_usermail'); // Инпут с почтой пользователя
 const leaveCommentButton = commentsPopup.querySelector('.button_type_comment'); // Кнопка «Оставить комментарий»
 const closeFormButton = commentsPopup.querySelector('.close'); // Кнопка закрытия попапа с комментариями
+let commentErrors = commentsPopup.querySelectorAll('.new-comment__text-error'); // Ошибки загрузки стихотворений
 const generateRhymes = commentsPopup.querySelector('.button_type_refresh'); // Кнопка «Сгенерировать другой стих»
 const commentOptions = commentsPopup.querySelectorAll('.new-comment__option'); // Кнопки-комментарии
 
@@ -36,6 +37,7 @@ const commentOptions = commentsPopup.querySelectorAll('.new-comment__option'); /
 // -- Открытие и закрытие попапа
 
 function openCommentsPopup() { // Открытие попапа с комментариями
+  refreshComments();
   commentsPopup.classList.add('new-comment_visible');
 }
 
@@ -69,6 +71,17 @@ function putText () { // Отрисовка текста инициативы
 }
 
 // -- Логика формирования комментариев
+
+function dismissCommentsErrors () { // Удаление ошибок загрузки комментариев
+  if (commentErrors) {
+    commentErrors.forEach(error => {
+      error.remove();
+      error = null;
+    });
+  
+    commentErrors = null;
+  }
+}
 
 function getRandomRhymeObject () { // Получить случаный объект со стихотворением
   const rand = Math.floor(Math.random() * rhymes.length);
@@ -155,6 +168,8 @@ function putPhoto (author, option) { // Вставить фотографию а
 }
 
 function refreshComments () { // Обновить варианты комментариев
+  dismissCommentsErrors();
+
   commentOptions.forEach(option => {
     const commentTextField = option.querySelector('.new-comment__text');
     const commentAuthor = option.querySelector('.new-comment__author');
