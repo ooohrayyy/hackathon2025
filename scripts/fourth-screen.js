@@ -67,3 +67,7 @@ generateRhymes.addEventListener('click', (evt) => { // Кнопка «Сгене
   evt.preventDefault();
   refreshText();
 });
+
+// * Вызываем функции
+
+refreshText();
