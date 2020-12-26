@@ -254,6 +254,20 @@
         </button>
       </form>
     </div>
+    <template id="template-comment">
+      <article class="comment">
+        <section class="comment__title">
+          <img class="comment__userpic" src="./resources/images/userpic-placeholder.png" alt="Аватар пользователя">
+          <h3 class="comment__author"></h3>
+          <p class="comment__time">Сегодня</p>
+        </section>
+        <p class="comment__text"></p>
+        <section class="comment__reaction">
+          <button class="comment__like"></button>
+          <p class="comment__like-count">0</p>
+        </section>
+      </article>
+    </template>
     <script src="./scripts/common.js"></script>
     <script src="./scripts/initiative.js"></script>
   </body>

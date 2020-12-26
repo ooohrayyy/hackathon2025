@@ -19,6 +19,8 @@ const initiativeTitle = document.querySelector('.initiative__title'); // Наз�
 const mainIllustration = document.querySelector('.initiative__image'); // Иллюстрация к инициативе
 const initiativeText = document.querySelector('.initiative__text'); // Текст инициативы
 
+const commentsContainer = document.querySelector('.initiative__comments'); // Контейнер с комментариями
+
 const supportButton = document.querySelector('.button_type_support'); // Кнопка «Подписать»
 const shareButtons = document.querySelectorAll('.initiative__share-link'); // Кнопки шеринга в соцсетях
 const newCommentButton = document.querySelector('.button_type_comment'); // Кнопка «Комментировать»
@@ -31,6 +33,8 @@ const closeFormButton = commentsPopup.querySelector('.close'); // Кнопка �
 let commentErrors = commentsPopup.querySelectorAll('.new-comment__text-error'); // Ошибки загрузки стихотворений
 const generateRhymes = commentsPopup.querySelector('.button_type_refresh'); // Кнопка «Сгенерировать другой стих»
 const commentOptions = commentsPopup.querySelectorAll('.new-comment__option'); // Кнопки-комментарии
+
+const commentTemplate = document.querySelector('#template-comment'); // Шаблон комментария
 
 // * Объявляем функции
 
@@ -196,6 +200,30 @@ function saveUserInfo () { // Сохранение пользовательск�
   localStorage.comment_usermail = usermailInput.value;
 }
 
+// -- Добавление нового комментария
+
+function createNewComment () { // Создание нового комментария
+  const newComment = commentTemplate.cloneNode(true).content;
+
+  const newCommentAuthor = newComment.querySelector('.comment__author');
+  const newCommentText = newComment.querySelector('.comment__text');
+
+  newCommentAuthor.textContent = localStorage.comment_username;
+  newCommentText.textContent = localStorage.comment_text;
+
+  return newComment;
+}
+
+function addNewComment () { // Добавление нового комментария
+  const newComment = createNewComment();
+  const commentsTitle = commentsContainer.querySelector('.initiative__comments-title');
+  commentsTitle.after(newComment);
+}
+
+function goUp () { // Прокрутка страницы наверх
+  window.scrollBy(0, -100000);
+}
+
 // * Вешаем слушатели событий
 
 supportButton.addEventListener('click', () => { // Слушатель кнопки «Подписать»
@@ -217,7 +245,9 @@ leaveCommentButton.addEventListener('click', (evt) => { // Слушатель к
 
   if (activeOption) {
     saveUserInfo();
-    alert('Пока оставлять комментарии нельзя');
+    addNewComment();
+    commentsPopup.classList.remove('new-comment_visible');
+    goUp();
   } else {
     alert('Пожалуйста, выберите подходящий комментарий');
   }
