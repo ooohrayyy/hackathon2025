@@ -2,6 +2,7 @@
   box-sizing: border-box;
   position: relative;
   display: flex;
+  flex-direction: column;
   place-content: center;
   width: 506px;
   height: 358px;

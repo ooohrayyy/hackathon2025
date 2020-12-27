@@ -1,7 +1,5 @@
 .form__author {
-  position: absolute;
-  bottom: 36px;
-  right: 30px;
+  transform: translateX(45px);
   font-family: Ubuntu, Arial, sans-serif;
   font-size: 18px;
   font-weight: 300;
