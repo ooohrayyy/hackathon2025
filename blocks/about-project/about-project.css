@@ -4,7 +4,7 @@
     max-width: 1440px;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 700px) {
     .about-project {
       display: none;
     }

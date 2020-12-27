@@ -6,7 +6,7 @@
   height: 100vh;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 700px) {
   .sorry {
     display: flex;
   }

@@ -6,7 +6,7 @@
   padding-top: 33px;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 700px) {
   .header {
     display: none;
   }

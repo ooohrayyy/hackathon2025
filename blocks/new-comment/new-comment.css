@@ -5,13 +5,12 @@
   visibility: hidden;
   opacity: 0;
   width: 100vw;
-  /* max-width: 100vw; */
   min-height: 100vh;
   background-color: rgba(0, 0, 0, .5);
   transition: visibility .3s, opacity .3s linear;
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 700px) {
   .new-comment {
     display: none;
   }
