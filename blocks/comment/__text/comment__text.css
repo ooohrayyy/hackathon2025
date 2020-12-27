@@ -1,8 +1,8 @@
 .comment__text {
   margin: 0;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: Ubuntu, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
   color: #606060;
   white-space: pre-wrap;
 }

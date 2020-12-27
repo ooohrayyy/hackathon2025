@@ -2,5 +2,7 @@
   position: absolute;
   bottom: 36px;
   right: 30px;
-  font-size: 14px;
+  font-family: Ubuntu, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
 }

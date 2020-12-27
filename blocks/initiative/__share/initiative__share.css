@@ -10,5 +10,7 @@
 .initiative__share::before {
   content: 'Поделиться';
   margin-right: 48px;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 24px;
+  font-weight: 400;
 }

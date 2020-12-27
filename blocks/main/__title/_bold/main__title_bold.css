@@ -1,4 +1,6 @@
 .main__title_bold {
-  font-weight: 700;
+  font-size: 78px;
+  font-weight: 500;
+  line-height: 94px;
   text-transform: uppercase;
 }

@@ -5,6 +5,9 @@
   padding: 0;
   border: none;
   border-radius: 10px;
+  font-family: Ubuntu, sans-serif, Arial;
+  font-size: 18px;
+  font-weight: 500;
   color: #fffefe;
   background-color: #59a1f2;
   transition: .2s linear;

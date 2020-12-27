@@ -1,7 +1,6 @@
 .form__photo-info-title {
-  margin: 0 0 16px 0;
-  font-family: Amaranth, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, .8);
+  margin: 0 0 14px 0;
+  font-size: 20px;
+  font-style: normal;
+  color: #4c4c4c;
 }

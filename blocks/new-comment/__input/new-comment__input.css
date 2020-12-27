@@ -6,7 +6,9 @@
   border: none;
   border-radius: 10px;
   margin-bottom: 16px;
-  font-size: 14px;
+  font-family: Ubuntu, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
   background-color: #f0f7ff;
 }
 
