@@ -91,3 +91,13 @@
   font-display: swap;
   src: url(./Roboto/Roboto-Bold.ttf) format("opentype");
 }
+
+/* Подключаем RubikMonoOne */ 
+
+@font-face {
+  font-family: RubikMonoOne;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./RubikMonoOne-Regular.ttf) format("opentype");
+}

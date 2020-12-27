@@ -20,15 +20,18 @@
 @import url(../blocks/header/__list/header__list.css);
 @import url(../blocks/header/__list-item/header__list-item.css);
 @import url(../blocks/header/__link/header__link.css);
-@import url(../blocks/header/__link/_disabled/header__link_disabled.css);
 
-/* Подключаем блок main и его компоненты */
+/* Подключаем блок about-project и его компоненты */
 
-@import url(../blocks/main/main.css);
-@import url(../blocks/main/_index/main_index.css);
-@import url(../blocks/main/__title/main__title.css);
-@import url(../blocks/main/__title/_bold/main__title_bold.css);
-@import url(../blocks/main/__text/main__text.css);
+@import url(../blocks/about-project/about-project.css);
+@import url(../blocks/about-project/project/project.css);
+@import url(../blocks/about-project/about-project__title.css);
+@import url(../blocks/about-project/project/__container/project__container.css);
+@import url(../blocks/about-project/project/__container/_description/project__container_description.css);
+@import url(../blocks/about-project/project/__container/_subtitle/project__container_subtitle.css);
+@import url(../blocks/about-project/project/__img-container/_text/project__img-container_text.css);
+@import url(../blocks/about-project/project/__container/_root/_element/project__container_root_element.css);
+@import url(../blocks/about-project/project/__container/_defenition/project__container_defenition.css);
 
 /* Подключаем блок footer и его компоненты */
 
@@ -37,14 +40,3 @@
 @import url(../blocks/footer/__list/footer__list.css);
 @import url(../blocks/footer/__list-item/footer__list-item.css);
 @import url(../blocks/footer/__link/footer__link.css);
-
-/* Подключаем блок button и его компоненты */
-
-@import url(../blocks/button/button.css);
-@import url(../blocks/button/_type/button_type_create.css);
-
-/* Подключаем блок sorry и его компоненты */
-
-@import url(../blocks/sorry/sorry.css);
-@import url(../blocks/sorry/__title/sorry__title.css);
-@import url(../blocks/sorry/__text/sorry__text.css);
