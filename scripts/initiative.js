@@ -91,11 +91,42 @@ function putRandomComments () { // Отрисовка рандомных ком�
     commentText.textContent = newObject.fields.text;
     commentLikes.textContent = getRandomInteger(1, 1432);
   });
+
+  localStorage.initial_comments_generated = 'true';
+  saveGeneratedComments();
 }
 
 function getRandomInteger (min, max) { // Получение случайного числа
   let rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
+}
+
+function saveGeneratedComments () {
+  localStorage.initial_comments_1_author = initialComments[0].querySelector('.comment__author').textContent;
+  localStorage.initial_comments_1_text = initialComments[0].querySelector('.comment__text').textContent;
+  localStorage.initial_comments_1_likes = initialComments[0].querySelector('.comment__like-count').textContent;
+
+  localStorage.initial_comments_2_author = initialComments[1].querySelector('.comment__author').textContent;
+  localStorage.initial_comments_2_text = initialComments[1].querySelector('.comment__text').textContent;
+  localStorage.initial_comments_2_likes = initialComments[1].querySelector('.comment__like-count').textContent;
+  
+  localStorage.initial_comments_3_author = initialComments[2].querySelector('.comment__author').textContent;
+  localStorage.initial_comments_3_text = initialComments[2].querySelector('.comment__text').textContent;
+  localStorage.initial_comments_3_likes = initialComments[2].querySelector('.comment__like-count').textContent;
+}
+
+function putSavedComments () {
+  initialComments[0].querySelector('.comment__author').textContent = localStorage.initial_comments_1_author;
+  initialComments[0].querySelector('.comment__text').textContent = localStorage.initial_comments_1_text;
+  initialComments[0].querySelector('.comment__like-count').textContent = localStorage.initial_comments_1_likes;
+
+  initialComments[1].querySelector('.comment__author').textContent = localStorage.initial_comments_2_author;
+  initialComments[1].querySelector('.comment__text').textContent = localStorage.initial_comments_2_text;
+  initialComments[1].querySelector('.comment__like-count').textContent = localStorage.initial_comments_2_likes;
+  
+  initialComments[2].querySelector('.comment__author').textContent = localStorage.initial_comments_3_author;
+  initialComments[2].querySelector('.comment__text').textContent = localStorage.initial_comments_3_text;
+  initialComments[2].querySelector('.comment__like-count').textContent = localStorage.initial_comments_3_likes;
 }
 
 // -- Логика лайков
@@ -354,4 +385,9 @@ commentOptions.forEach((option) => { // Слушатели кнопок опци
 putName();
 putIllustration();
 putText();
-putRandomComments();
+
+if (localStorage.initial_comments_generated) {
+  putSavedComments();
+} else {
+  putRandomComments();
+}
