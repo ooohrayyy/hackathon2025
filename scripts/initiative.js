@@ -20,6 +20,7 @@ const mainIllustration = document.querySelector('.initiative__image'); // Илл
 const initiativeText = document.querySelector('.initiative__text'); // Текст инициативы
 
 const commentsContainer = document.querySelector('.initiative__comments'); // Контейнер с комментариями
+const likeButtons = document.querySelectorAll('.comment__like'); // Кнопки лайков
 
 const supportButton = document.querySelector('.button_type_support'); // Кнопка «Подписать»
 const shareButtons = document.querySelectorAll('.initiative__share-link'); // Кнопки шеринга в соцсетях
@@ -233,6 +234,12 @@ supportButton.addEventListener('click', () => { // Слушатель кнопк
 shareButtons.forEach((button) => { // Слушатель кнопок шеринга в соцсетях
   button.addEventListener('click', () => {
     alert('Тут будет шеринг в соцсетях');
+  });
+});
+
+likeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Ставить лайки пока нельзя');
   });
 });
 
