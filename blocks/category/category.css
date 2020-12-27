@@ -2,15 +2,15 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 152px;
   height: 142px;
   margin-right: 24px;
   margin-bottom: 24px;
-  border: none;
+  border: 1px solid #deecfc;
   border-radius: 10px;
-  background-color: #c4c4c4;
+  background-color: white;
   outline: none;
 }
 
