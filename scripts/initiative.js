@@ -20,6 +20,7 @@ const mainIllustration = document.querySelector('.initiative__image'); // Илл
 const initiativeText = document.querySelector('.initiative__text'); // Текст инициативы
 
 const initialComments = document.querySelectorAll('.comment'); // Комментарии «из коробки»
+let allCommentsLength = initialComments.length; // Количество комментариев на странице
 
 const commentsContainer = document.querySelector('.initiative__comments'); // Контейнер с комментариями
 const likeButtons = document.querySelectorAll('.comment__like'); // Кнопки лайков
@@ -93,7 +94,7 @@ function putRandomComments () { // Отрисовка рандомных ком�
   });
 
   localStorage.initial_comments_generated = 'true';
-  saveGeneratedComments();
+  saveComments();
 }
 
 function getRandomInteger (min, max) { // Получение случайного числа
@@ -101,32 +102,47 @@ function getRandomInteger (min, max) { // Получение случайног�
   return Math.floor(rand);
 }
 
-function saveGeneratedComments () { // Сохранить сгенерированные комментарии
-  localStorage.initial_comments_1_author = initialComments[0].querySelector('.comment__author').textContent;
-  localStorage.initial_comments_1_text = initialComments[0].querySelector('.comment__text').textContent;
-  localStorage.initial_comments_1_likes = initialComments[0].querySelector('.comment__like-count').textContent;
+function saveComments () { // Сохранить сгенерированные комментарии
+  const allComments = document.querySelectorAll('.comment');
+  // const allCommentsLength = allComments.length;
 
-  localStorage.initial_comments_2_author = initialComments[1].querySelector('.comment__author').textContent;
-  localStorage.initial_comments_2_text = initialComments[1].querySelector('.comment__text').textContent;
-  localStorage.initial_comments_2_likes = initialComments[1].querySelector('.comment__like-count').textContent;
-  
-  localStorage.initial_comments_3_author = initialComments[2].querySelector('.comment__author').textContent;
-  localStorage.initial_comments_3_text = initialComments[2].querySelector('.comment__text').textContent;
-  localStorage.initial_comments_3_likes = initialComments[2].querySelector('.comment__like-count').textContent;
+  for (i = 0; i < allCommentsLength; i++) {
+    localStorage.setItem(`comments_author_${i}`, allComments[i].querySelector('.comment__author').textContent);
+    localStorage.setItem(`comments_text_${i}`, allComments[i].querySelector('.comment__text').textContent);
+    localStorage.setItem(`comments_likes_${i}`, allComments[i].querySelector('.comment__like-count').textContent);
+
+    const likeButton = allComments[i].querySelector('.comment__like');
+
+    if (likeButton.classList.contains('comment__like_active')) {
+      localStorage.setItem(`comments_likes_state_${i}`, 'active');
+    } else {
+      localStorage.setItem(`comments_likes_state_${i}`, 'inactive');
+    }
+  }
 }
 
 function putSavedComments () { // Вставить сохранённые комментарии
-  initialComments[0].querySelector('.comment__author').textContent = localStorage.initial_comments_1_author;
-  initialComments[0].querySelector('.comment__text').textContent = localStorage.initial_comments_1_text;
-  initialComments[0].querySelector('.comment__like-count').textContent = localStorage.initial_comments_1_likes;
+  const allComments = document.querySelectorAll('.comment');
+  // const allCommentsLength = allComments.length;
 
-  initialComments[1].querySelector('.comment__author').textContent = localStorage.initial_comments_2_author;
-  initialComments[1].querySelector('.comment__text').textContent = localStorage.initial_comments_2_text;
-  initialComments[1].querySelector('.comment__like-count').textContent = localStorage.initial_comments_2_likes;
-  
-  initialComments[2].querySelector('.comment__author').textContent = localStorage.initial_comments_3_author;
-  initialComments[2].querySelector('.comment__text').textContent = localStorage.initial_comments_3_text;
-  initialComments[2].querySelector('.comment__like-count').textContent = localStorage.initial_comments_3_likes;
+  for (i = 0; i < allCommentsLength; i++) {
+    const author = localStorage.getItem(`comments_author_${i}`);
+    const text = localStorage.getItem(`comments_text_${i}`);
+    const likes = localStorage.getItem(`comments_likes_${i}`);
+
+    allComments[i].querySelector('.comment__author').textContent = author;
+    allComments[i].querySelector('.comment__text').textContent = text;
+    allComments[i].querySelector('.comment__like-count').textContent = likes;
+
+    const likeButton = allComments[i].querySelector('.comment__like');
+    const likeState = localStorage.getItem(`comments_likes_state_${i}`);
+
+    if (likeState == 'active') {
+      likeButton.classList.add('comment__like_active');
+    } else {
+      likeButton.classList.remove('comment__like_active');
+    }
+  }
 }
 
 // -- Логика лайков
@@ -139,7 +155,7 @@ function addLike (evt) { // Добавление лайка
   countElement.textContent = +countedLikes + 1;
   button.classList.add('comment__like_active');
 
-  saveLikesCondition();
+  saveComments();
 
   button.removeEventListener('click', addLike);
   button.addEventListener('click', removeLike);
@@ -153,41 +169,10 @@ function removeLike (evt) { // Удаление лайка
   countElement.textContent = +countedLikes - 1;
   button.classList.remove('comment__like_active');
 
-  saveLikesCondition();
+  saveComments();
 
   button.removeEventListener('click', removeLike);
   button.addEventListener('click', addLike);
-}
-
-function saveLikesCondition () { // Сохранить состояние лайков
-  const allLikeButtons = document.querySelectorAll('.comment__like');
-  const likeButtonsLength = allLikeButtons.length;
-
-  for (i = 0; i < likeButtonsLength; i++) {
-    localStorage.setItem(`comment_likes_count_${i}`, allLikeButtons[i].nextElementSibling.textContent);
-
-    if (allLikeButtons[i].classList.contains('comment__like_active')) {
-      localStorage.setItem(`comment_likes_state_${i}`, 'active');
-    } else {
-      localStorage.setItem(`comment_likes_state_${i}`, 'inactive');
-    }
-  }
-}
-
-function putLikesCondition () {
-  const allLikeButtons = document.querySelectorAll('.comment__like');
-  const likeButtonsLength = allLikeButtons.length;
-
-  for (i = 0; i < likeButtonsLength; i++) {
-    const likesCount = localStorage.getItem(`comment_likes_count_${i}`);
-    allLikeButtons[i].nextElementSibling.textContent = +likesCount;
-
-    const likeState = localStorage.getItem(`comment_likes_state_${i}`);
-
-    if (likeState == 'active') {
-      allLikeButtons[i].classList.add('comment__like_active');
-    }
-  }
 }
 
 // -- Логика формирования комментариев
@@ -337,6 +322,9 @@ function createNewComment () { // Создание нового коммента
 
   const newCommentAuthor = newComment.querySelector('.comment__author');
   const newCommentText = newComment.querySelector('.comment__text');
+  const newCommentLike = newComment.querySelector('.comment__like');
+
+  newCommentLike.addEventListener('click', addLike);
 
   newCommentAuthor.textContent = localStorage.comment_username;
   newCommentText.textContent = localStorage.comment_text;
@@ -348,6 +336,8 @@ function addNewComment () { // Добавление нового коммент�
   const newComment = createNewComment();
   const commentsTitle = commentsContainer.querySelector('.initiative__comments-title');
   commentsTitle.after(newComment);
+  allCommentsLength++;
+  saveComments();
 }
 
 function goUp () { // Прокрутка страницы наверх
@@ -422,7 +412,6 @@ putText();
 
 if (localStorage.initial_comments_generated) {
   putSavedComments();
-  putLikesCondition();
 } else {
   putRandomComments();
 }
