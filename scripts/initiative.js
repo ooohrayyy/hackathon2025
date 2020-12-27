@@ -79,7 +79,7 @@ function putText () { // Отрисовка текста инициативы
 
 // -- Отрисовка рандомных комментариев
 
-function putRandomComments () {
+function putRandomComments () { // Отрисовка рандомных комментариев
   initialComments.forEach(comment => {
     const commentAuthor = comment.querySelector('.comment__author');
     const commentText = comment.querySelector('.comment__text');
@@ -93,14 +93,14 @@ function putRandomComments () {
   });
 }
 
-function getRandomInteger (min, max) {
+function getRandomInteger (min, max) { // Получение случайного числа
   let rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 }
 
 // -- Логика лайков
 
-function addLike (evt) {
+function addLike (evt) { // Добавление лайка
   const button = evt.target;
   const countElement = button.nextElementSibling;
   console.log(countElement);
@@ -113,7 +113,7 @@ function addLike (evt) {
   button.addEventListener('click', removeLike);
 }
 
-function removeLike (evt) {
+function removeLike (evt) { // Удаление лайка
   const button = evt.target;
   const countElement = button.nextElementSibling;
   const countedLikes = countElement.textContent;
@@ -301,13 +301,7 @@ shareButtons.forEach((button) => { // Слушатель кнопок шерин
   });
 });
 
-// likeButtons.forEach(button => {
-//   button.addEventListener('click', () => {
-//     alert('Ставить лайки пока нельзя');
-//   });
-// });
-
-likeButtons.forEach(button => {
+likeButtons.forEach(button => { // Слушатель кнопок лайков
   button.addEventListener('click', addLike);
 });
 
