@@ -121,53 +121,53 @@ function putPhoto (author, option) { // Вставить фотографию а
 
   switch (author) {
     case 'Валерий Брюсов':
-      authorPic.src = '../resources/images/authors/brusov.png';
+      authorPic.src = 'resources/images/authors/brusov.png';
       break;
     case 'Владимир Маяковский':
-      authorPic.src = '../resources/images/authors/mayak.png';
+      authorPic.src = 'resources/images/authors/mayak.png';
       break;
     case 'Илья Эренбург':
-      authorPic.src = '../resources/images/authors/erenburg.png';
+      authorPic.src = 'resources/images/authors/erenburg.png';
       break;
     case 'Владимир Высоцкий':
-      authorPic.src = '../resources/images/authors/vys.png';
+      authorPic.src = 'resources/images/authors/vys.png';
       break;
     case 'Зинаида Гиппиус':
-      authorPic.src = '../resources/images/authors/gippius.png';
+      authorPic.src = 'resources/images/authors/gippius.png';
       break;
     case 'Корней Чуковский':
-      authorPic.src = '../resources/images/authors/chuk.png';
+      authorPic.src = 'resources/images/authors/chuk.png';
       break;
     case 'Евгений Баратынский':
-      authorPic.src = '../resources/images/authors/barat.png';
+      authorPic.src = 'resources/images/authors/barat.png';
       break;
     case 'Афанасий Фет':
-      authorPic.src = '../resources/images/authors/fet.png';
+      authorPic.src = 'resources/images/authors/fet.png';
       break;
     case 'Игорь Северянин':
-      authorPic.src = '../resources/images/authors/sev.png';
+      authorPic.src = 'resources/images/authors/sev.png';
       break;
     case 'Анна Ахматова':
-      authorPic.src = '../resources/images/authors/ah.png';
+      authorPic.src = 'resources/images/authors/ah.png';
       break;
     case 'Сергей Есенин':
-      authorPic.src = '../resources/images/authors/es.png';
+      authorPic.src = 'resources/images/authors/es.png';
       break;
     case 'Александр Блок':
-      authorPic.src = '../resources/images/authors/blok.png';
+      authorPic.src = 'resources/images/authors/blok.png';
       break;
     case 'Николай Гумилев':
       author = 'Николай Гумилёв';
-      authorPic.src = '../resources/images/authors/gum.png';
+      authorPic.src = 'resources/images/authors/gum.png';
       break;
     case 'Белла Ахмадулина':
-      authorPic.src = '../resources/images/authors/bella.png';
+      authorPic.src = 'resources/images/authors/bella.png';
       break;
     case 'Велимир Хлебников':
-      authorPic.src = '../resources/images/authors/hleb.png';
+      authorPic.src = 'resources/images/authors/hleb.png';
       break;
     default:
-      authorPic.src = '../resources/images/userpic-placeholder.png';
+      authorPic.src = 'resources/images/userpic-placeholder.png';
       refreshComments();
   }
 }
