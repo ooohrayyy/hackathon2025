@@ -1,5 +1,6 @@
 .initiative__more-comments {
-  display: block;
+  /* display: block; */
+  display: none;
   padding: 0;
   border: none;
   margin-bottom: 36px;
