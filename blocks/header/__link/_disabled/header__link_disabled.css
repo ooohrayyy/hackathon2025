@@ -1,0 +1,21 @@
+.header__link_disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.header__link_disabled:hover {
+  color: gray;
+  transform: none;
+}
+
+.header__link_disabled::after {
+  content: '';
+  width: 0;
+  height: 0;
+}
+
+.header__link_disabled:hover::after {
+  content: '';
+  width: 0;
+  height: 0;
+}
