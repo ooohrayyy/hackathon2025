@@ -104,7 +104,6 @@ function getRandomInteger (min, max) { // Получение случайног�
 
 function saveComments () { // Сохранить сгенерированные комментарии
   const allComments = document.querySelectorAll('.comment');
-  // const allCommentsLength = allComments.length;
 
   for (i = 0; i < allCommentsLength; i++) {
     localStorage.setItem(`comments_author_${i}`, allComments[i].querySelector('.comment__author').textContent);
@@ -123,7 +122,6 @@ function saveComments () { // Сохранить сгенерированные 
 
 function putSavedComments () { // Вставить сохранённые комментарии
   const allComments = document.querySelectorAll('.comment');
-  // const allCommentsLength = allComments.length;
 
   for (i = 0; i < allCommentsLength; i++) {
     const author = localStorage.getItem(`comments_author_${i}`);
