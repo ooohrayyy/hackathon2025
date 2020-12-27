@@ -105,9 +105,9 @@ function addLike (evt) {
   const countElement = button.nextElementSibling;
   console.log(countElement);
   const countedLikes = countElement.textContent;
-  console.log(countedLikes);
 
   countElement.textContent = +countedLikes + 1;
+  button.classList.add('comment__like_active');
 
   button.removeEventListener('click', addLike);
   button.addEventListener('click', removeLike);
@@ -116,11 +116,10 @@ function addLike (evt) {
 function removeLike (evt) {
   const button = evt.target;
   const countElement = button.nextElementSibling;
-  console.log(countElement);
   const countedLikes = countElement.textContent;
-  console.log(countedLikes);
 
   countElement.textContent = +countedLikes - 1;
+  button.classList.remove('comment__like_active');
 
   button.removeEventListener('click', removeLike);
   button.addEventListener('click', addLike);
