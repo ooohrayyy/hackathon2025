@@ -1,6 +1,5 @@
 .form__categories {
   display: flex;
-  gap: 24px;
   flex-wrap: wrap;
   width: 506px;
   padding: 0;
