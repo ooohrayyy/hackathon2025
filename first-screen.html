@@ -34,11 +34,11 @@
         <div class="main__progress-bar main__progress-bar_step_one"></div>
         <form class="form">
           <label class="form__label" for="initiative">Назови инициативу</label>
-          <input class="form__input" id="initiative_name" type="text" name="initiative">
+          <input class="form__input" id="initiative_name" type="text" name="initiative" required>
           <label class="form__label" for="username">Введи имя</label>
-          <input class="form__input" id="initiative_username" type="text" name="username" placeholder="ФИО">
+          <input class="form__input" id="initiative_username" type="text" name="username" required placeholder="ФИО">
           <label class="form__label" for="usermail">Укажи почту</label>
-          <input class="form__input" id="initiative_usermail" type="e-mail" name="usermail" placeholder="e-mail">
+          <input class="form__input" id="initiative_usermail" type="e-mail" name="usermail" required placeholder="e-mail">
           <p class="form__info">Мы не передаём данные третьим лицам и коммерческим организациям. Тебе не будут писать мошенники и приходить спам. 
           Это сделано для того, чтобы ты мог получать уведомления о статусе своей инициативы.</p>
           <button class="button button_type_next">Дальше</button>
@@ -71,6 +71,5 @@
       </ul>
     </footer>
     <script src="scripts/first-screen.js"></script>
-    <script src="scripts/common.js"></script>
   </body>
 </html>

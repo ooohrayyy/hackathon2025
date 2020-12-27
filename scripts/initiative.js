@@ -195,6 +195,14 @@ function refreshComments () { // Обновить варианты коммен�
   });
 }
 
+function checkUserInfo () { // Валидация пользовательских данных
+  if (usernameInput.validity.valid && usermailInput.validity.valid) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function saveUserInfo () { // Сохранение пользовательской информации
   localStorage.comment_username = usernameInput.value;
   localStorage.comment_usermail = usermailInput.value;
@@ -247,15 +255,19 @@ newCommentButton.addEventListener('click', openCommentsPopup); // Слушате
 leaveCommentButton.addEventListener('click', (evt) => { // Слушатель кнопки «Комментировать» в попапе
   evt.preventDefault();
 
-  const activeOption = document.querySelector('.new-comment__option_active');
+  if (checkUserInfo()) {
+    const activeOption = document.querySelector('.new-comment__option_active');
 
-  if (activeOption) {
-    saveUserInfo();
-    addNewComment();
-    commentsPopup.classList.remove('new-comment_visible');
-    goUp();
+    if (activeOption) {
+      saveUserInfo();
+      addNewComment();
+      commentsPopup.classList.remove('new-comment_visible');
+      goUp();
+    } else {
+      alert('Пожалуйста, выберите подходящий комментарий');
+    }
   } else {
-    alert('Пожалуйста, выберите подходящий комментарий');
+    alert('Пожалуйста, заполните все поля');
   }
 });
 
