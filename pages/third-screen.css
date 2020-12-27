@@ -64,6 +64,7 @@
 /* Подключаем блок category и его компоненты */
 
 @import url(../blocks/category/category.css);
+@import url(../blocks/category/_sub/category_sub.css);
 @import url(../blocks/category/_active/category_active.css);
 @import url(../blocks/category/__name/category__name.css);
 
