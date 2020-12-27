@@ -1,5 +1,5 @@
 .project__container {
     display: flex;
-    margin-left: 150px;
+    margin: 0 67px 0 150px;
     justify-content: space-between;
 }
