@@ -1,6 +1,27 @@
+/* Подключаем normalize.css */
+
 @import url(../resources/vendor/normalize.css);
+
+/* Подключаем шрифты */
+
 @import url(../resources/fonts/fonts.css);
 
+/* Подключаем блок root */
+
+@import url(../blocks/root/root.css);
+@import url(../blocks/root/__header/root__header.css);
+@import url(../blocks/root/__main/root__main.css);
+@import url(../blocks/root/__footer/root__footer.css);
+
+/* Подключаем блок header и его компоненты */
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__list/header__list.css);
+@import url(../blocks/header/__list-item/header__list-item.css);
+@import url(../blocks/header/__link/header__link.css);
+
+/* Подключаем блок about-project и его компоненты */
 
 @import url(../blocks/about-project/about-project.css);
 @import url(../blocks/about-project/project/project.css);
@@ -11,3 +32,11 @@
 @import url(../blocks/about-project/project/__img-container/_text/project__img-container_text.css);
 @import url(../blocks/about-project/project/__container/_root/_element/project__container_root_element.css);
 @import url(../blocks/about-project/project/__container/_defenition/project__container_defenition.css);
+
+/* Подключаем блок footer и его компоненты */
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__author/footer__author.css);
+@import url(../blocks/footer/__list/footer__list.css);
+@import url(../blocks/footer/__list-item/footer__list-item.css);
+@import url(../blocks/footer/__link/footer__link.css);
