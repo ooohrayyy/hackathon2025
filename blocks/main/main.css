@@ -10,3 +10,9 @@
     height: calc(717px - 10%);
   }
 }
+
+@media screen and (max-height: 800px) {
+  .main {
+    display: none;
+  }
+}
