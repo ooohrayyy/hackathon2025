@@ -1,8 +1,9 @@
 .new-comment__container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1330px;
+  max-width: 100vw;
   max-height: 873px;
   padding: 62px 75px 42px;
   margin-top: 15px;
