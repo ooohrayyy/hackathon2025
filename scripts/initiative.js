@@ -139,6 +139,8 @@ function addLike (evt) { // Добавление лайка
   countElement.textContent = +countedLikes + 1;
   button.classList.add('comment__like_active');
 
+  saveLikesCondition();
+
   button.removeEventListener('click', addLike);
   button.addEventListener('click', removeLike);
 }
@@ -151,6 +153,8 @@ function removeLike (evt) { // Удаление лайка
   countElement.textContent = +countedLikes - 1;
   button.classList.remove('comment__like_active');
 
+  saveLikesCondition();
+
   button.removeEventListener('click', removeLike);
   button.addEventListener('click', addLike);
 }
@@ -160,14 +164,28 @@ function saveLikesCondition () { // Сохранить состояние лай
   const likeButtonsLength = allLikeButtons.length;
 
   for (i = 0; i < likeButtonsLength; i++) {
-    console.log(allLikeButtons);
-    console.log(allLikeButtons[i]);
     localStorage.setItem(`comment_likes_count_${i}`, allLikeButtons[i].nextElementSibling.textContent);
 
     if (allLikeButtons[i].classList.contains('comment__like_active')) {
       localStorage.setItem(`comment_likes_state_${i}`, 'active');
     } else {
       localStorage.setItem(`comment_likes_state_${i}`, 'inactive');
+    }
+  }
+}
+
+function putLikesCondition () {
+  const allLikeButtons = document.querySelectorAll('.comment__like');
+  const likeButtonsLength = allLikeButtons.length;
+
+  for (i = 0; i < likeButtonsLength; i++) {
+    const likesCount = localStorage.getItem(`comment_likes_count_${i}`);
+    allLikeButtons[i].nextElementSibling.textContent = +likesCount;
+
+    const likeState = localStorage.getItem(`comment_likes_state_${i}`);
+
+    if (likeState == 'active') {
+      allLikeButtons[i].classList.add('comment__like_active');
     }
   }
 }
@@ -404,6 +422,7 @@ putText();
 
 if (localStorage.initial_comments_generated) {
   putSavedComments();
+  putLikesCondition();
 } else {
   putRandomComments();
 }
