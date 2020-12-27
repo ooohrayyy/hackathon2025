@@ -1,0 +1,19 @@
+.sorry {
+  display: none;
+  flex-direction: column;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media screen and (max-height: 700px) {
+  .sorry {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .sorry {
+    display: flex;
+  }
+}

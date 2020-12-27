@@ -1,0 +1,12 @@
+.form__textarea-wrapper {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 506px;
+  height: 358px;
+  padding: 15px 0;
+  border: 1px solid #C4C4C4;
+}

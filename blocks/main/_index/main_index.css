@@ -1,0 +1,9 @@
+.main_index {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../../../resources/images/main-image.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+}

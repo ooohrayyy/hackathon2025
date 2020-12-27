@@ -1,0 +1,13 @@
+.button_type_refresh {
+  align-self: flex-start;
+  width: initial;
+  height: initial;
+  font-size: 16px;
+  font-weight: 400;
+  color: #59a1f2;
+  background-color: transparent;
+}
+
+.button_type_refresh:hover {
+  box-shadow: none;
+}

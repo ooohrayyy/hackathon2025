@@ -1,0 +1,8 @@
+.project__container_defenition {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin-right: 100px;
+    font-size: 22px;
+    line-height: 26px;
+}

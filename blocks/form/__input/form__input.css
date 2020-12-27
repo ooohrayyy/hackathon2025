@@ -1,0 +1,20 @@
+.form__input {
+  box-sizing: border-box;
+  display: block;
+  width: 506px;
+  height: 52px;
+  padding-left: 16px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  margin-top: 16px;
+  font-family: Ubuntu, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (max-height: 999px) {
+  .form__input {
+    height: 42px;
+    margin-top: 12px;
+  }
+}

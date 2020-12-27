@@ -1,0 +1,15 @@
+.new-comment__text-error {
+  width: 319px;
+  height: 150px;
+  margin: 0;
+  font-family: Ubuntu, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+  color: red;
+}

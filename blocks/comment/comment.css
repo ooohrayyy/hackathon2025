@@ -1,0 +1,8 @@
+.comment {
+  width: 415px;
+  padding-bottom: 45px;
+}
+
+.comment:last-of-type {
+  padding-bottom: 37px;
+}

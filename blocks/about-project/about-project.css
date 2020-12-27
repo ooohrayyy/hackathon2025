@@ -1,0 +1,17 @@
+.about-project {
+    margin: 0 auto;
+    margin-bottom: 122px;
+    max-width: 1440px;
+}
+
+@media screen and (max-height: 700px) {
+    .about-project {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 1279px) {
+    .about-project {
+      display: none;
+    }
+  }

@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  width: 188px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  font-family: Ubuntu, sans-serif, Arial;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fffefe;
+  background-color: #59a1f2;
+  transition: .2s linear;
+  outline: none;
+}
+
+.button:hover {
+  box-shadow: 5px 5px 15px 0 rgba(89, 161, 242, 0.5);
+}
+
+.button:disabled {
+  background-color: rgba(89, 161, 242, .4);
+}
+
+.button:disabled:hover {
+  background-color: rgba(89, 161, 242, .8);
+  box-shadow: 5px 5px 15px 0 rgba(89, 161, 242, 0.5);
+}

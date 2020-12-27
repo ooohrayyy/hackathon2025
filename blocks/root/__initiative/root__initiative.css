@@ -1,0 +1,15 @@
+.root__initiative {
+  margin: 0 97px;
+}
+
+@media screen and (max-height: 700px) {
+  .root__initiative {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .root__initiative {
+    display: none;
+  }
+}

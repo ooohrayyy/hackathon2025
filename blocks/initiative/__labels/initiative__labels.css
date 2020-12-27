@@ -1,0 +1,5 @@
+.initiative__labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 21px;
+}

@@ -1,0 +1,103 @@
+/* Подключаем Raleway */
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(./Raleway/Raleway-Light.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./Raleway/Raleway-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./Raleway/Raleway-Medium.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(./Raleway/Raleway-Bold.ttf) format("opentype");
+}
+
+/* Подключаем Ubuntu */
+
+@font-face {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(./Ubuntu/Ubuntu-Light.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./Ubuntu/Ubuntu-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./Ubuntu/Ubuntu-Medium.ttf) format("opentype");
+}
+
+/* Подключаем Roboto */
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(./Roboto/Roboto-Light.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./Roboto/Roboto-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./Roboto/Roboto-Medium.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(./Roboto/Roboto-Bold.ttf) format("opentype");
+}
+
+/* Подключаем RubikMonoOne */ 
+
+@font-face {
+  font-family: RubikMonoOne;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./RubikMonoOne-Regular.ttf) format("opentype");
+}

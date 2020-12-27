@@ -1,0 +1,7 @@
+.new-comment__author {
+  align-self: flex-end;
+  margin: 27px 26px 30px 0;
+  font-family: Ubuntu, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
