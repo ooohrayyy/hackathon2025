@@ -1,6 +1,7 @@
 // * Объявляем переменные
 
 const headerLinks = document.querySelectorAll('.header__link'); // Ссылки в хэдере
+const aboutLink = document.querySelector('#about-link'); // Ссылка «О проекте»
 
 const previousPage = 'index.html'; // Предыдущая страница
 const nextPage = 'second-screen.html'; // Следующая страница
@@ -36,9 +37,11 @@ function saveUserData () { // Сохранить пользовательски�
 
 // * Вешаем слушатели событий
 
-headerLinks.forEach((link) => { // Слушатель ссылок в хэдере
+headerLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    alert('Эти ссылки пока не работают');
+    if (link != aboutLink) {
+      alert('Эти ссылки пока не работают');
+    }
   });
 });
 

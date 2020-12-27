@@ -1,6 +1,7 @@
 // * Объявляем переменные
 
 const headerLinks = document.querySelectorAll('.header__link'); // Ссылки в хэдере
+const aboutLink = document.querySelector('#about-link'); // Ссылка «О проекте»
 const nextButtons = document.querySelectorAll('.button_type_next'); // Кнопки «Дальше»
 const backButtons = document.querySelectorAll('.button_type_back'); // Кнопки «Назад»
 const socialButtons = document.querySelectorAll('.footer__link'); // Кнопки соцсетей в футере
@@ -75,9 +76,11 @@ getSubcategories(categoryName);
 
 // * Вешаем слушатели событий
 
-headerLinks.forEach((link) => { // Алерты на ссылки в хэдере
+headerLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    alert('Эти ссылки пока не работают');
+    if (link != aboutLink) {
+      alert('Эти ссылки пока не работают');
+    }
   });
 });
 
