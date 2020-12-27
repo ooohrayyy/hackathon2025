@@ -208,6 +208,13 @@ function saveUserInfo () { // Сохранение пользовательск�
   localStorage.comment_usermail = usermailInput.value;
 }
 
+function saveCommentText () {
+  const activeOption = commentsPopup.querySelector('.new-comment__option_active');
+  const commentText = activeOption.querySelector('.new-comment__text').textContent;
+
+  localStorage.comment_text = commentText;
+}
+
 // -- Добавление нового комментария
 
 function createNewComment () { // Создание нового комментария
@@ -260,6 +267,7 @@ leaveCommentButton.addEventListener('click', (evt) => { // Слушатель к
 
     if (activeOption) {
       saveUserInfo();
+      saveCommentText();
       addNewComment();
       commentsPopup.classList.remove('new-comment_visible');
       goUp();
@@ -288,9 +296,6 @@ commentOptions.forEach((option) => { // Слушатели кнопок опци
     otherOptions.forEach(option => {
       option.classList.remove('new-comment__option_active');
     });
-
-    const optionText = option.querySelector('.new-comment__text').textContent;
-    localStorage.comment_text = optionText;
 
     option.classList.toggle('new-comment__option_active');
   });
