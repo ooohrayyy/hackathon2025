@@ -98,6 +98,34 @@ function getRandomInteger (min, max) {
   return Math.floor(rand);
 }
 
+// -- Логика лайков
+
+function addLike (evt) {
+  const button = evt.target;
+  const countElement = button.nextElementSibling;
+  console.log(countElement);
+  const countedLikes = countElement.textContent;
+  console.log(countedLikes);
+
+  countElement.textContent = +countedLikes + 1;
+
+  button.removeEventListener('click', addLike);
+  button.addEventListener('click', removeLike);
+}
+
+function removeLike (evt) {
+  const button = evt.target;
+  const countElement = button.nextElementSibling;
+  console.log(countElement);
+  const countedLikes = countElement.textContent;
+  console.log(countedLikes);
+
+  countElement.textContent = +countedLikes - 1;
+
+  button.removeEventListener('click', removeLike);
+  button.addEventListener('click', addLike);
+}
+
 // -- Логика формирования комментариев
 
 function dismissCommentsErrors () { // Удаление ошибок загрузки комментариев
@@ -274,10 +302,14 @@ shareButtons.forEach((button) => { // Слушатель кнопок шерин
   });
 });
 
+// likeButtons.forEach(button => {
+//   button.addEventListener('click', () => {
+//     alert('Ставить лайки пока нельзя');
+//   });
+// });
+
 likeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    alert('Ставить лайки пока нельзя');
-  });
+  button.addEventListener('click', addLike);
 });
 
 newCommentButton.addEventListener('click', openCommentsPopup); // Слушатель кнопки «Комментировать» на странице
