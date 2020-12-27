@@ -157,7 +157,6 @@ function putPhoto (author, option) { // Вставить фотографию а
       authorPic.src = 'resources/images/authors/blok.png';
       break;
     case 'Николай Гумилев':
-      author = 'Николай Гумилёв';
       authorPic.src = 'resources/images/authors/gum.png';
       break;
     case 'Белла Ахмадулина':
