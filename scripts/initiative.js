@@ -41,7 +41,7 @@ const commentTemplate = document.querySelector('#template-comment'); // Шабл
 
 // -- Открытие и закрытие попапа
 
-function openCommentsPopup() { // Открытие попапа с комментариями
+function openCommentsPopup () { // Открытие попапа с комментариями
   refreshComments();
   commentsPopup.classList.add('new-comment_visible');
 }
