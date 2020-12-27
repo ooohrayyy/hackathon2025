@@ -19,6 +19,8 @@ const initiativeTitle = document.querySelector('.initiative__title'); // Наз�
 const mainIllustration = document.querySelector('.initiative__image'); // Иллюстрация к инициативе
 const initiativeText = document.querySelector('.initiative__text'); // Текст инициативы
 
+const initialComments = document.querySelectorAll('.comment'); // Комментарии «из коробки»
+
 const commentsContainer = document.querySelector('.initiative__comments'); // Контейнер с комментариями
 const likeButtons = document.querySelectorAll('.comment__like'); // Кнопки лайков
 
@@ -73,6 +75,27 @@ function putText () { // Отрисовка текста инициативы
   } else {
     initiativeText.textContent = '*Текста нет*';
   }
+}
+
+// -- Отрисовка рандомных комментариев
+
+function putRandomComments () {
+  initialComments.forEach(comment => {
+    const commentAuthor = comment.querySelector('.comment__author');
+    const commentText = comment.querySelector('.comment__text');
+    const commentLikes = comment.querySelector('.comment__like-count');
+
+    const newObject = getRandomRhymeObject();
+
+    commentAuthor.textContent = newObject.fields.author;
+    commentText.textContent = newObject.fields.text;
+    commentLikes.textContent = getRandomInteger(1, 1432);
+  });
+}
+
+function getRandomInteger (min, max) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
 }
 
 // -- Логика формирования комментариев
@@ -306,3 +329,4 @@ commentOptions.forEach((option) => { // Слушатели кнопок опци
 putName();
 putIllustration();
 putText();
+putRandomComments();
