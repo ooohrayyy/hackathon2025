@@ -101,7 +101,7 @@ function getRandomInteger (min, max) { // Получение случайног�
   return Math.floor(rand);
 }
 
-function saveGeneratedComments () {
+function saveGeneratedComments () { // Сохранить сгенерированные комментарии
   localStorage.initial_comments_1_author = initialComments[0].querySelector('.comment__author').textContent;
   localStorage.initial_comments_1_text = initialComments[0].querySelector('.comment__text').textContent;
   localStorage.initial_comments_1_likes = initialComments[0].querySelector('.comment__like-count').textContent;
@@ -115,7 +115,7 @@ function saveGeneratedComments () {
   localStorage.initial_comments_3_likes = initialComments[2].querySelector('.comment__like-count').textContent;
 }
 
-function putSavedComments () {
+function putSavedComments () { // Вставить сохранённые комментарии
   initialComments[0].querySelector('.comment__author').textContent = localStorage.initial_comments_1_author;
   initialComments[0].querySelector('.comment__text').textContent = localStorage.initial_comments_1_text;
   initialComments[0].querySelector('.comment__like-count').textContent = localStorage.initial_comments_1_likes;
@@ -134,7 +134,6 @@ function putSavedComments () {
 function addLike (evt) { // Добавление лайка
   const button = evt.target;
   const countElement = button.nextElementSibling;
-  console.log(countElement);
   const countedLikes = countElement.textContent;
 
   countElement.textContent = +countedLikes + 1;
@@ -154,6 +153,23 @@ function removeLike (evt) { // Удаление лайка
 
   button.removeEventListener('click', removeLike);
   button.addEventListener('click', addLike);
+}
+
+function saveLikesCondition () { // Сохранить состояние лайков
+  const allLikeButtons = document.querySelectorAll('.comment__like');
+  const likeButtonsLength = allLikeButtons.length;
+
+  for (i = 0; i < likeButtonsLength; i++) {
+    console.log(allLikeButtons);
+    console.log(allLikeButtons[i]);
+    localStorage.setItem(`comment_likes_count_${i}`, allLikeButtons[i].nextElementSibling.textContent);
+
+    if (allLikeButtons[i].classList.contains('comment__like_active')) {
+      localStorage.setItem(`comment_likes_state_${i}`, 'active');
+    } else {
+      localStorage.setItem(`comment_likes_state_${i}`, 'inactive');
+    }
+  }
 }
 
 // -- Логика формирования комментариев
