@@ -1,0 +1,13 @@
+.sorry {
+  display: none;
+  flex-direction: column;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media screen and (max-height: 800px) {
+  .sorry {
+    display: flex;
+  }
+}

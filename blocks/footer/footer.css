@@ -4,3 +4,9 @@
   height: 40px;
   padding-bottom: 32px;
 }
+
+@media screen and (max-height: 800px) {
+  .footer {
+    display: none;
+  }
+}

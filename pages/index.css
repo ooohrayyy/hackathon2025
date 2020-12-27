@@ -42,3 +42,9 @@
 
 @import url(../blocks/button/button.css);
 @import url(../blocks/button/_type/button_type_create.css);
+
+/* Подключаем блок sorry и его компоненты */
+
+@import url(../blocks/sorry/sorry.css);
+@import url(../blocks/sorry/__title/sorry__title.css);
+@import url(../blocks/sorry/__text/sorry__text.css);

@@ -99,3 +99,9 @@
 /* Подключаем блок close */
 
 @import url(../blocks/close/close.css);
+
+/* Подключаем блок sorry и его компоненты */
+
+@import url(../blocks/sorry/sorry.css);
+@import url(../blocks/sorry/__title/sorry__title.css);
+@import url(../blocks/sorry/__text/sorry__text.css);
